@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Dummy, Home, NotFound } from "./pages";
+import { Landing, Home, NotFound } from "./pages";
 import { AuthContextProvider } from "./context";
 
 ReactDOM.render(
@@ -14,7 +14,7 @@ ReactDOM.render(
         <Routes>
           <Route path="/" element={<App />}>
             <Route index element={<Home />} />
-            <Route path="dummy" element={<Dummy />} />
+            <Route path="landing" element={<Landing />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
