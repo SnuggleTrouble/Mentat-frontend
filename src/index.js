@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
+import App from "../../frontend-boilerplate/src/App";
+import reportWebVitals from "../../frontend-boilerplate/src/reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Landing, Home, NotFound } from "./pages";
-import { AuthContextProvider } from "./context";
+import { Landing, Home, NotFound } from "pages";
+import { PrivateRoute } from "components";
+import { AuthContextProvider } from "context";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -13,7 +14,14 @@ ReactDOM.render(
       <AuthContextProvider>
         <Routes>
           <Route path="/" element={<App />}>
-            <Route index element={<Home />} />
+            <Route
+              index
+              element={
+                <PrivateRoute>
+                  <Home />
+                </PrivateRoute>
+              }
+            />
             <Route path="landing" element={<Landing />} />
             <Route path="*" element={<NotFound />} />
           </Route>

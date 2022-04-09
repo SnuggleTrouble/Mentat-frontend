@@ -1,6 +1,6 @@
 import styles from "./Signup.module.css";
 import { useState, useContext } from "react";
-import { AuthContext } from "../../context";
+import { AuthContext } from "context";
 
 export function Signup() {
   const { signup } = useContext(AuthContext);
