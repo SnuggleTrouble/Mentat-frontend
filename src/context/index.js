@@ -32,7 +32,12 @@ export function AuthContextProvider({ children }) {
         password,
       });
       saveToken(response.data.token);
-      setUser(response.data.user);
+      const foundUser = {
+        firstname: response.data.firstname,
+        lastName: response.data.lastName,
+        email: response.data.email,
+      };
+      setUser(foundUser);
       navigate("/");
     } catch (error) {
       console.error(error);
