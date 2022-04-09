@@ -1,6 +1,6 @@
 import styles from "./Signup.module.css";
 import { useState, useContext } from "react";
-import { AuthContext } from "context";
+import { AuthContext } from "../../context";
 
 export function Signup() {
   const { signup } = useContext(AuthContext);
@@ -42,7 +42,7 @@ export function Signup() {
           setEmail(e.target.value);
         }}
       />
-      <label htmlFor="password">Passwprd:</label>
+      <label htmlFor="password">Password:</label>
       <input
         id="password"
         type="password"

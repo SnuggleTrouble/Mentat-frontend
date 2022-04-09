@@ -1,17 +1,15 @@
 import { Outlet } from "react-router-dom";
 import styles from "./App.module.css";
-import { Navbar } from "./components";
+import { Navbar } from "components";
 
 function App() {
   return (
-    <div className={styles.textColor}>
+    <div>
       <Navbar />
       <Outlet />
       footer
     </div>
   );
 }
-
-// this is another test to see if it works
 
 export default App;
