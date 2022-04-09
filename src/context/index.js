@@ -1,6 +1,6 @@
 
 import { createContext, useState } from "react";
-import { client } from "client";
+import { client } from "../client";
 
 export const AuthContext = createContext();
 
@@ -17,7 +17,12 @@ export function AuthContextProvider({ children }) {
     console.log(response);
   };
 
-  const login = async (email, password) => {};
+  const login = async (email, password) => {
+    const response = await client.post("/auth/login", {
+      email,
+      password, 
+    });
+  };
 
   const value = {
     user,

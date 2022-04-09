@@ -1,3 +1,3 @@
 export { Home } from "./Home";
-export { Dummy } from "./Dummy";
+export { Landing } from "./Landing";
 export { NotFound } from "./NotFound";
