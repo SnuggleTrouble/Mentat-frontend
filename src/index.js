@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "../../frontend-boilerplate/src/App";
-import reportWebVitals from "../../frontend-boilerplate/src/reportWebVitals";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Landing, Home, NotFound } from "pages";
 import { PrivateRoute } from "components";
