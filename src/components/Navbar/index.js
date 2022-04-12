@@ -9,6 +9,8 @@ export function Navbar() {
     <nav>
       {user && <Link to="/">Home</Link>}
       {!user && <Link to="/landing">Landing</Link>}
+      {!user && <Link to="/Login">Login</Link>}
+      {!user && <Link to="/Signup">Signup</Link>}
       {user && <button onClick={logout}>Logout</button>}
     </nav>
   );

@@ -7,7 +7,7 @@ function App() {
     <div>
       <Navbar />
       <Outlet />
-      footer
+      Footer
     </div>
   );
 }
