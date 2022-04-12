@@ -22,9 +22,9 @@ ReactDOM.render(
                 </PrivateRoute>
               }
             />
-            <Route path="landing" element={<Landing />} />
-            <Route path="signup" element={<SignupPage />} />
             <Route path="login" element={<LoginPage />} />
+            <Route path="landing" element={<Landing />} /> 
+            <Route path="signup" element={<SignupPage />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
