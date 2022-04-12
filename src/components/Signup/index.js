@@ -6,12 +6,13 @@ export function Signup() {
   const { signup } = useContext(AuthContext);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    signup(firstName, lastName, email, password);
+    signup(firstName, lastName, email, userName, password);
   };
 
   return (
@@ -31,6 +32,14 @@ export function Signup() {
         value={lastName}
         onChange={(e) => {
           setLastName(e.target.value);
+        }}
+      />
+      <label htmlFor="userName">Username:</label>
+      <input
+        id="userName"
+        value={userName}
+        onChange={(e) => {
+          setUserName(e.target.value);
         }}
       />
       <label htmlFor="email">Email:</label>
