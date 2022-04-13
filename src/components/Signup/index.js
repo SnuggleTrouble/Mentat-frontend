@@ -12,7 +12,7 @@ export function Signup() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    signup(firstName, lastName, email, userName, password);
+    signup(firstName, lastName, userName, email, password);
   };
 
   return (

@@ -6,7 +6,7 @@ import styles from "./Home.module.css";
 export function Home() {
   const navigate = useNavigate();
   const { user } = useContext(AuthContext);
-  !user && navigate('/Login')
+  !user && navigate('/login')
   return (
     <div>
      {user ?
@@ -14,7 +14,7 @@ export function Home() {
       <h1>Home</h1>
       <code>{JSON.stringify(user)}</code>
     </div>:(
-      navigate('/Login')
+      navigate('/login')
     )} 
     </div>
   );
