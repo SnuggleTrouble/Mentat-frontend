@@ -1,20 +1,20 @@
 import { useState } from "react";
-import "./Menti.module.css";
+import "./Post.module.css";
 
-// I receuve the id, the content and the setTweets function
-export function Menti({ id, title, content , setMenti , menti }) {
+// Receive the id, the content and the setPost function
+export function Post({ id, title, content, setPosts, post }) {
   const [showAll, setShowAll] = useState(false);
   const [edit, setEdit] = useState(false);
-  const [newMentiContent, setNewMentiContent] = useState(content);
-  const [newMentiTitle, setNewMentiTitle] = useState(title);
+  const [newPostTitle, setNewPostTitle] = useState(title);
+  const [newPostContent, setNewPostContent] = useState(content);
 
-  // handle tweet deletion
+  // handle Post deletion
   const handleDelete = () => {
-    setMenti((previousMentis) => {
-      // return the new array or filtered tweets
-      return previousMentis.filter((menti) => {
-        // a tweet is gonna stay in the array if its id is different from the the id of the curretn tweet
-        return menti.id !== id;
+    setPosts((previousPosts) => {
+      // return the new array or filtered Posts
+      return previousPosts.filter((post) => {
+        // a Post is gonna stay in the array if its id is different from the the id of the current Post
+        return post.id !== id;
       });
     });
   };
@@ -35,28 +35,39 @@ export function Menti({ id, title, content , setMenti , menti }) {
   };
 
   const handleSave = () => {
-    setMenti((previousMentis) => {
-      return previousMentis.map((menti) => {
-        if (menti.id === id) {
+    setPosts((previousPosts) => {
+      return previousPosts.map((post) => {
+        if (post.id === id) {
           return {
-            id: menti.id,
-            content: newMentiContent,
+            id: post.id,
+            title: newPostTitle,
+            content: newPostContent,
           };
         } else {
-          return menti;
+          return post;
         }
       });
     });
     handleCancel();
   };
   return (
-    <div className="menti">
-      <div className="menti__input">
-        <div className="username">{`${menti.user.firstName} ${menti.user.lastName}`}</div>
+    <div className="post">
+      <div className="post_input">
+        <div className="username">{`${post.user.userName}`}</div>
+
+        {edit ? (
+          <input
+            value={newPostTitle}
+            onChange={(event) => setNewPostTitle(event.target.value)}
+          />
+        ) : (
+          <p>{title}</p>
+        )}
+
         {edit ? (
           <textarea
-            value={newMentiContent}
-            onChange={(event) => setNewMentiContent(event.target.value)}
+            value={newPostContent}
+            onChange={(event) => setNewPostContent(event.target.value)}
           />
         ) : showAll ? (
           <p>{content}</p>
@@ -67,12 +78,12 @@ export function Menti({ id, title, content , setMenti , menti }) {
         )}
 
         {edit ? (
-          <div className="menti__actions">
+          <div className="post_actions">
             <button onClick={handleSave}>Save</button>
             <button onClick={handleCancel}>Cancel</button>
           </div>
         ) : (
-          <div className="menti__actions">
+          <div className="post_actions">
             <button onClick={handleEdit}>Edit</button>
             <button onClick={handleDelete}>Delete</button>
             {content.length > 100 && (
@@ -85,4 +96,4 @@ export function Menti({ id, title, content , setMenti , menti }) {
       </div>
     </div>
   );
- }
+}
