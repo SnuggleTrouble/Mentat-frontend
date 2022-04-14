@@ -1,6 +1,7 @@
 import { useContext, useState, useEffect } from "react";
 import { AuthContext } from "context";
 import { useNavigate } from "react-router-dom";
+import { AddPost, Post, ListOfPosts } from "components"
 import styles from "./Home.module.css";
 import axios from "axios";
 
@@ -36,6 +37,8 @@ export function Home() {
       {user ? (
         <div>
           <h1>Home</h1>
+           <AddPost getposts={getPosts} setposts={setPosts}/> 
+           <ListOfPosts posts={posts} setPosts = {setPosts}/> 
           <code>{JSON.stringify(user)}</code>
         </div>
       ) : (
@@ -44,3 +47,15 @@ export function Home() {
     </div>
   );
 }
+
+{/* function HomeFeed() {
+  return (
+    <div>
+      <Post /> 
+      <AddPost /> 
+      <ListOfPosts /> 
+      Footer
+    </div>
+  );
+} */}
+

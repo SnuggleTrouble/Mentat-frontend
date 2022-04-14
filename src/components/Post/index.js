@@ -51,6 +51,7 @@ export function Post({ id, title, content, setPosts, post }) {
     handleCancel();
   };
   return (
+    <> {console.log (post) } 
     <div className="post">
       <div className="post_input">
         <div className="username">{`${post.user.userName}`}</div>
@@ -94,6 +95,6 @@ export function Post({ id, title, content, setPosts, post }) {
           </div>
         )}
       </div>
-    </div>
+    </div> </>
   );
 }
