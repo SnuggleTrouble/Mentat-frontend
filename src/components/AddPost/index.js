@@ -15,7 +15,7 @@ export function AddPost({ getposts }) {
       content: postContent,
     };
     // url of the endpoint for posts
-    const url = `${process.env.REACT_APP_BACKEND_URL}/posts`;
+    const url = `${process.env.REACT_APP_BACKEND_URL}/post`;
     // request configuration for adding a header with authorization
     const config = {
       headers: {

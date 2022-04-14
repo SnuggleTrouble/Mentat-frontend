@@ -7,6 +7,7 @@ export function Landing() {
   return (
     <div>
       <h1>Welcome to Mentat</h1>
+      <h2>A place for you to share with others your experiences with mental health.</h2>
     </div>
   );
 }

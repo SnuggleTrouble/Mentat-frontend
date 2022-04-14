@@ -13,7 +13,7 @@ export function Home() {
   // Function to acquire the posts from the backend
   const getPosts = async () => {
     // Endpoint for acquiring posts from the backend
-    const url = `${process.env.REACT_APP_BACKEND_URL / posts}/posts`;
+    const url = `${process.env.REACT_APP_BACKEND_URL}/post`;
     // Request config that is going to hold the authorization
     const config = {
       headers: {
