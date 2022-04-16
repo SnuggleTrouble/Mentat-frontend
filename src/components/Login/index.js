@@ -7,7 +7,7 @@ export function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
     login(email, password);
   };
@@ -18,7 +18,7 @@ export function Login() {
       <input
         id="email"
         value={email}
-        onChange={(e) => {
+        onChange={e => {
           setEmail(e.target.value);
         }}
       />
@@ -27,7 +27,7 @@ export function Login() {
         id="password"
         type="password"
         value={password}
-        onChange={(e) => {
+        onChange={e => {
           setPassword(e.target.value);
         }}
       />

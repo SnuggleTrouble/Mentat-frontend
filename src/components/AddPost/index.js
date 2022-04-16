@@ -7,7 +7,7 @@ export function AddPost({ getposts }) {
   const [postTitle, setPostTitle] = useState("");
   const [postContent, setPostContent] = useState("");
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async event => {
     event.preventDefault();
     // Data to send in the request body
     const data = {
@@ -31,11 +31,13 @@ export function AddPost({ getposts }) {
   return (
     <form onSubmit={handleSubmit} className="post">
       <div className="post_content">
-      <input value={postTitle}
-          onChange={(event) => setPostTitle(event.target.value)}/>
+        <input
+          value={postTitle}
+          onChange={event => setPostTitle(event.target.value)}
+        />
         <textarea
           value={postContent}
-          onChange={(event) => setPostContent(event.target.value)}
+          onChange={event => setPostContent(event.target.value)}
         />
         <button type="submit">Create Post</button>
       </div>

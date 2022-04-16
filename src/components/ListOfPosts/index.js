@@ -3,7 +3,7 @@ import { Post } from "../Post";
 export function ListOfPosts({ posts, setPosts, getPosts }) {
   return (
     <div>
-      {posts.map((post) => {
+      {posts.map(post => {
         // pass the id, the content and the setPosts function
         return (
           <Post
@@ -14,7 +14,8 @@ export function ListOfPosts({ posts, setPosts, getPosts }) {
             setPosts={setPosts}
             post={post}
             getPosts={getPosts}
-          /> ); 
+          />
+        );
       })}
     </div>
   );
