@@ -11,7 +11,7 @@ export function Post({ id, title, content, setPosts, post, getPosts }) {
 
   // handle Post deletion
   const handleDelete = () => {
-    ( async function () {
+    (async function () {
       // Endpoint for DELETING posts from the backend
       const url = `${process.env.REACT_APP_BACKEND_URL}/post/${id}`;
       // Request config that is going to hold the authorization
@@ -21,15 +21,15 @@ export function Post({ id, title, content, setPosts, post, getPosts }) {
         },
       };
       // make the request
-      const result = await axios.delete(url ,config);
-  
-      getPosts()
-    })()
+      const result = await axios.delete(url, config);
+
+      getPosts();
+    })();
   };
 
   // handle the change of variable showAll
   const handleShowAll = () => {
-    setShowAll((previousValue) => {
+    setShowAll(previousValue => {
       return !previousValue;
     });
   };
@@ -43,69 +43,71 @@ export function Post({ id, title, content, setPosts, post, getPosts }) {
   };
 
   const handleSave = () => {
-      // Function to EDIT the posts from the backend
-  ( async function () {
-    // Endpoint for EDITING posts from the backend
-    const url = `${process.env.REACT_APP_BACKEND_URL}/post/${id}`;
-    // Request config that is going to hold the authorization
-    const config = {
-      headers: {
-        authorization: localStorage.getItem("token"),
-      },
-    };
-    // make the request
-    const result = await axios.put(url, {title:newPostTitle, content:newPostContent},config);
+    // Function to EDIT the posts from the backend
+    (async function () {
+      // Endpoint for EDITING posts from the backend
+      const url = `${process.env.REACT_APP_BACKEND_URL}/post/${id}`;
+      // Request config that is going to hold the authorization
+      const config = {
+        headers: {
+          authorization: localStorage.getItem("token"),
+        },
+      };
+      // make the request
+      const result = await axios.put(url, { title: newPostTitle, content: newPostContent }, config);
+      getPosts();
+    })();
 
-    getPosts()
-  })();
-
-    handleCancel(); 
+    handleCancel();
   };
   return (
-    <> 
-    <div className="post">
-      <div className="post_input">
-        <div className="username">{`${post.user.userName}`}</div>
+    <>
+      <div className="post">
+        <div className="post_input">
+          <div className="username">{`${post.user.userName}`}</div>
 
-        {edit ? (
-          <input
-            value={newPostTitle}
-            onChange={(event) => setNewPostTitle(event.target.value)}
-          />
-        ) : (
-          <p>{title}</p>
-        )}
+          {edit ? (
+            <input
+              value={newPostTitle}
+              onChange={event => setNewPostTitle(event.target.value)}
+            />
+          ) : (
+            <p>{title}</p>
+          )}
 
-        {edit ? (
-          <textarea
-            value={newPostContent}
-            onChange={(event) => setNewPostContent(event.target.value)}
-          />
-        ) : showAll ? (
-          <p>{content}</p>
-        ) : (
-          <p>
-            {content.length > 100 ? `${content.substring(0, 100)}...` : content}
-          </p>
-        )}
+          {edit ? (
+            <textarea
+              value={newPostContent}
+              onChange={event => setNewPostContent(event.target.value)}
+            />
+          ) : showAll ? (
+            <p>{content}</p>
+          ) : (
+            <p>
+              {content.length > 100
+                ? `${content.substring(0, 100)}...`
+                : content}
+            </p>
+          )}
 
-        {edit ? (
-          <div className="post_actions">
-            <button onClick={handleSave}>Save</button>
-            <button onClick={handleCancel}>Cancel</button>
-          </div>
-        ) : (
-          <div className="post_actions">
-            <button onClick={handleEdit}>Edit</button>
-            <button onClick={handleDelete}>Delete</button>
-            {content.length > 100 && (
-              <button onClick={handleShowAll}>
-                {showAll ? "Read less" : "Read more"}
-              </button>
-            )}
-          </div>
-        )}
-      </div>
-    </div> </>
+          {edit ? (
+            <div className="post_actions">
+              <button onClick={handleSave}>Save</button>
+              <button onClick={handleCancel}>Cancel</button>
+            </div>
+          ) : (
+            <div className="post_actions">
+              <button onClick={handleEdit}>Edit</button>
+              <button onClick={handleDelete}>Delete</button>
+              {content.length > 100 && (
+                <button onClick={handleShowAll}>
+                  {showAll ? "Read less" : "Read more"}
+                </button>
+              )}
+            </div>
+          )}
+        </div>
+      </div>{" "}
+    </>
   );
 }

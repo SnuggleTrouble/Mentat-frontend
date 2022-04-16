@@ -1,7 +1,7 @@
 import { useContext, useState, useEffect } from "react";
 import { AuthContext } from "context";
 import { useNavigate } from "react-router-dom";
-import { AddPost, Post, ListOfPosts } from "components"
+import { AddPost, Post, ListOfPosts } from "components";
 import styles from "./Home.module.css";
 import axios from "axios";
 
@@ -29,7 +29,7 @@ export function Home() {
   // useEffect is used when doing API calls
   useEffect(() => {
     getPosts();
-  }, [])
+  }, []);
 
   !user && navigate("/login");
   return (
@@ -37,8 +37,8 @@ export function Home() {
       {user ? (
         <div>
           <h1>Home</h1>
-           <AddPost getposts={getPosts} setposts={setPosts}/> 
-           <ListOfPosts posts={posts} setPosts = {setPosts} getPosts={getPosts}/> 
+          <AddPost getposts={getPosts} setposts={setPosts} />
+          <ListOfPosts posts={posts} setPosts={setPosts} getPosts={getPosts} />
           <code>{JSON.stringify(user)}</code>
         </div>
       ) : (
@@ -48,7 +48,8 @@ export function Home() {
   );
 }
 
-{/* function HomeFeed() {
+{
+  /* function HomeFeed() {
   return (
     <div>
       <Post /> 
@@ -57,5 +58,5 @@ export function Home() {
       Footer
     </div>
   );
-} */}
-
+} */
+}

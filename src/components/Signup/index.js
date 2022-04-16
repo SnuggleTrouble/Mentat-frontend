@@ -10,7 +10,7 @@ export function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
     signup(firstName, lastName, userName, email, password);
   };
@@ -22,7 +22,7 @@ export function Signup() {
       <input
         id="firstName"
         value={firstName}
-        onChange={(e) => {
+        onChange={e => {
           setFirstName(e.target.value);
         }}
       />
@@ -30,7 +30,7 @@ export function Signup() {
       <input
         id="lastName"
         value={lastName}
-        onChange={(e) => {
+        onChange={e => {
           setLastName(e.target.value);
         }}
       />
@@ -38,7 +38,7 @@ export function Signup() {
       <input
         id="userName"
         value={userName}
-        onChange={(e) => {
+        onChange={e => {
           setUserName(e.target.value);
         }}
       />
@@ -47,7 +47,7 @@ export function Signup() {
         id="email"
         type="email"
         value={email}
-        onChange={(e) => {
+        onChange={e => {
           setEmail(e.target.value);
         }}
       />
@@ -56,7 +56,7 @@ export function Signup() {
         id="password"
         type="password"
         value={password}
-        onChange={(e) => {
+        onChange={e => {
           setPassword(e.target.value);
         }}
       />
