@@ -1,6 +1,6 @@
 import { Post } from "../Post";
 
-export function ListOfPosts({ posts, setPosts }) {
+export function ListOfPosts({ posts, setPosts, getPosts }) {
   return (
     <div>
       {posts.map((post) => {
@@ -8,13 +8,13 @@ export function ListOfPosts({ posts, setPosts }) {
         return (
           <Post
             key={post._id}
-            id={post.id}
+            id={post._id}
             title={post.title}
             content={post.content}
             setPosts={setPosts}
             post={post}
-          />
-        );
+            getPosts={getPosts}
+          /> ); 
       })}
     </div>
   );

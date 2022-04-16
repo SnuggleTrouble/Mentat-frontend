@@ -1,8 +1,9 @@
 import { useState } from "react";
 import "./Post.module.css";
+import axios from "axios";
 
 // Receive the id, the content and the setPost function
-export function Post({ id, title, content, setPosts, post }) {
+export function Post({ id, title, content, setPosts, post, getPosts }) {
   const [showAll, setShowAll] = useState(false);
   const [edit, setEdit] = useState(false);
   const [newPostTitle, setNewPostTitle] = useState(title);
@@ -35,23 +36,26 @@ export function Post({ id, title, content, setPosts, post }) {
   };
 
   const handleSave = () => {
-    setPosts((previousPosts) => {
-      return previousPosts.map((post) => {
-        if (post.id === id) {
-          return {
-            id: post.id,
-            title: newPostTitle,
-            content: newPostContent,
-          };
-        } else {
-          return post;
-        }
-      });
-    });
-    handleCancel();
+      // Function to EDIT the posts from the backend
+  ( async function () {
+    // Endpoint for EDITING posts from the backend
+    const url = `${process.env.REACT_APP_BACKEND_URL}/post/${id}`;
+    // Request config that is going to hold the authorization
+    const config = {
+      headers: {
+        authorization: localStorage.getItem("token"),
+      },
+    };
+    // make the request
+    const result = await axios.put(url, {title:newPostTitle, content:newPostContent},config);
+
+    getPosts()
+  })();
+
+    handleCancel(); 
   };
   return (
-    <> {console.log (post) } 
+    <> 
     <div className="post">
       <div className="post_input">
         <div className="username">{`${post.user.userName}`}</div>
