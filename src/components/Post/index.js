@@ -11,13 +11,20 @@ export function Post({ id, title, content, setPosts, post, getPosts }) {
 
   // handle Post deletion
   const handleDelete = () => {
-    setPosts((previousPosts) => {
-      // return the new array or filtered Posts
-      return previousPosts.filter((post) => {
-        // a Post is gonna stay in the array if its id is different from the the id of the current Post
-        return post.id !== id;
-      });
-    });
+    ( async function () {
+      // Endpoint for DELETING posts from the backend
+      const url = `${process.env.REACT_APP_BACKEND_URL}/post/${id}`;
+      // Request config that is going to hold the authorization
+      const config = {
+        headers: {
+          authorization: localStorage.getItem("token"),
+        },
+      };
+      // make the request
+      const result = await axios.delete(url ,config);
+  
+      getPosts()
+    })()
   };
 
   // handle the change of variable showAll
