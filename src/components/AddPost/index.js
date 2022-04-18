@@ -6,6 +6,7 @@ import "./AddPost.module.css";
 export function AddPost({ getposts }) {
   const [postTitle, setPostTitle] = useState("");
   const [postContent, setPostContent] = useState("");
+/*const [postCategory, setPostCategory] = useState();*/
 
   const handleSubmit = async event => {
     event.preventDefault();
@@ -13,6 +14,7 @@ export function AddPost({ getposts }) {
     const data = {
       title: postTitle,
       content: postContent,
+     /* category: postCategory */
     };
     // url of the endpoint for posts
     const url = `${process.env.REACT_APP_BACKEND_URL}/post`;
@@ -39,6 +41,18 @@ export function AddPost({ getposts }) {
           value={postContent}
           onChange={event => setPostContent(event.target.value)}
         />
+       {/* <select 
+          value={postCategory}
+          onChange={event => setPostCategory(event.target.value)}>  
+        <option value="addiction">Addiction</option>
+        <option value="anxiety">Anxiety</option>
+        <option value="burnout">Burnout</option>
+        <option value="depression">Depression</option>
+        <option value="eatingDisorders">Eating Disorders</option>
+        <option value="ocd">OCD</option>
+        <option value="ptsd">PTSD</option>
+        </select> 
+        <h1> Hello World {postCategory} </h1> */}
         <button type="submit">Create Post</button>
       </div>
     </form>
