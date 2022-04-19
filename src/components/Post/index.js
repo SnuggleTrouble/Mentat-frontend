@@ -1,9 +1,11 @@
 import { useState } from "react";
 import "./Post.module.css";
 import axios from "axios";
+import { Support } from "components/Support/Support";
 
 // Receive the id, the content and the setPost function
-export function Post({ id, title, content, setPosts, post, getPosts, category}) {
+export function Post({ id, title, content, category, support, setPosts, post, getPosts }) {
+
   const [showAll, setShowAll] = useState(false);
   const [edit, setEdit] = useState(false);
   const [newPostTitle, setNewPostTitle] = useState(title);
@@ -118,6 +120,7 @@ export function Post({ id, title, content, setPosts, post, getPosts, category}) 
           )}
         </div>
       </div>{" "}
+      <Support support={support} id={id}/>
     </>
   );
 }
