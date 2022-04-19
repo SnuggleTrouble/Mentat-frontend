@@ -3,10 +3,11 @@ import "./Post.module.css";
 import axios from "axios";
 
 // Receive the id, the content and the setPost function
-export function Post({ id, title, content, setPosts, post, getPosts }) {
+export function Post({ id, title, content, setPosts, post, getPosts, category}) {
   const [showAll, setShowAll] = useState(false);
   const [edit, setEdit] = useState(false);
   const [newPostTitle, setNewPostTitle] = useState(title);
+  const [newPostCategory, setNewPostCategory] = useState(category);
   const [newPostContent, setNewPostContent] = useState(content);
 
   // handle Post deletion
@@ -54,7 +55,7 @@ export function Post({ id, title, content, setPosts, post, getPosts }) {
         },
       };
       // make the request
-      const result = await axios.put(url, { title: newPostTitle, content: newPostContent }, config);
+      const result = await axios.put(url, { title: newPostTitle, content: newPostContent, category: setNewPostCategory }, config);
       getPosts();
     })();
 
@@ -88,6 +89,15 @@ export function Post({ id, title, content, setPosts, post, getPosts }) {
                 ? `${content.substring(0, 100)}...`
                 : content}
             </p>
+          )}
+
+          {edit ? (
+            <select
+              value={newPostCategory}
+              onChange={event => setNewPostCategory(event.target.value)}
+            />
+          ) : (
+            <p>{category}</p>
           )}
 
           {edit ? (
