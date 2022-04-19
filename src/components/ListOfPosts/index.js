@@ -1,5 +1,6 @@
 import { Post } from "../Post";
 
+
 export function ListOfPosts({ posts, setPosts, getPosts }) {
   return (
     <div>
@@ -11,6 +12,7 @@ export function ListOfPosts({ posts, setPosts, getPosts }) {
             id={post._id}
             title={post.title}
             content={post.content}
+            support={post.support}
             setPosts={setPosts}
             post={post}
             getPosts={getPosts}
