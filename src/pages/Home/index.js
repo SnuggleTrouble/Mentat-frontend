@@ -47,16 +47,3 @@ export function Home() {
     </div>
   );
 }
-
-{
-  /* function HomeFeed() {
-  return (
-    <div>
-      <Post /> 
-      <AddPost /> 
-      <ListOfPosts /> 
-      Footer
-    </div>
-  );
-} */
-}
