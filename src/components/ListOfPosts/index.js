@@ -1,6 +1,6 @@
 import { Post } from "../Post";
 
-export function ListOfPosts({ posts, setPosts, getPosts }) {
+export function ListOfPosts({ posts, setPosts, getPosts ,  }) {
   return (
     <div>
       {posts.map(post => {
@@ -11,6 +11,7 @@ export function ListOfPosts({ posts, setPosts, getPosts }) {
             id={post._id}
             title={post.title}
             content={post.content}
+            category={post.category}
             setPosts={setPosts}
             post={post}
             getPosts={getPosts}
