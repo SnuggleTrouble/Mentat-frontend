@@ -44,7 +44,7 @@ export function AddPost({ getposts }) {
         <select
           value={postCategory}
           onChange={event => setPostCategory(event.target.value)}
-        >
+        > 
           <option value="addiction">Addiction</option>
           <option value="anxiety">Anxiety</option>
           <option value="burnout">Burnout</option>
