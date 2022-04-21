@@ -6,7 +6,7 @@ import "./AddPost.module.css";
 export function AddPost({ getposts }) {
   const [postTitle, setPostTitle] = useState("");
   const [postContent, setPostContent] = useState("");
-  const [postCategory, setPostCategory] = useState();
+  const [postCategory, setPostCategory] = useState("");
 
   const handleSubmit = async event => {
     event.preventDefault();
@@ -45,6 +45,7 @@ export function AddPost({ getposts }) {
           value={postCategory}
           onChange={event => setPostCategory(event.target.value)}
         > 
+          <option value="" selected disabled hidden>Select Category</option>
           <option value="addiction">Addiction</option>
           <option value="anxiety">Anxiety</option>
           <option value="burnout">Burnout</option>
