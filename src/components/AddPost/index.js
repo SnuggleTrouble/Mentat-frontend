@@ -46,13 +46,13 @@ export function AddPost({ getposts }) {
           onChange={event => setPostCategory(event.target.value)}
         > 
           <option value="" selected disabled hidden>Select Category</option>
-          <option value="addiction">Addiction</option>
-          <option value="anxiety">Anxiety</option>
-          <option value="burnout">Burnout</option>
-          <option value="depression">Depression</option>
-          <option value="eatingDisorders">Eating Disorders</option>
-          <option value="ocd">OCD</option>
-          <option value="ptsd">PTSD</option>
+          <option value="Addiction">Addiction</option>
+          <option value="Anxiety">Anxiety</option>
+          <option value="Burnout">Burnout</option>
+          <option value="Depression">Depression</option>
+          <option value="Eating disorders">Eating Disorders</option>
+          <option value="OCD">OCD</option>
+          <option value="PTSD">PTSD</option>
         </select>
         <button type="submit">Create Post</button>
       </div>
