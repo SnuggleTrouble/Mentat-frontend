@@ -9,18 +9,27 @@ export function Support({ support, id }) {
   const [userId, setUserId] = useState(user._id);
 
   const supportHandler = async () => {
-    console.log(id)
     // Endpoint for EDITING posts from the backend
     const url = `${process.env.REACT_APP_BACKEND_URL}/post/${id}/support`;
+    const urlUnsupport = `${process.env.REACT_APP_BACKEND_URL}/post/${id}/unsupport`;
     // Request config that is going to hold the authorization
     const config = {
       headers: {
         authorization: localStorage.getItem("token"),
       },
     };
-    // make the request
-    await setCounter(previousCount => [...previousCount, userId]);
-    axios.put(url, { support: counter }, config);
+
+    if (!counter.includes(userId)) {
+      await setCounter(previousCount => [...previousCount, userId]);
+      axios.put(url, { support: userId }, config);
+    } else { 
+      let counterCopy = [...counter]
+      const filterId = counterCopy.filter((c) => {
+      return c !== userId 
+      }) 
+      setCounter(filterId)
+      axios.put(urlUnsupport, { support: userId }, config); 
+    }
   };
 
   return (
