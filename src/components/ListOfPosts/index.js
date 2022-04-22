@@ -1,11 +1,10 @@
-import { Post } from "../Post";
+import { Post } from "components/Post";
 
 export function ListOfPosts({ posts, setPosts, getPosts }) {
-
   return (
     <div>
-      {posts.map(post => {
-        // pass the id, the content and the setPosts function
+      {posts.map((post) => {
+        // Pass the id, the content and the setPosts function
         return (
           <Post
             key={post._id}
