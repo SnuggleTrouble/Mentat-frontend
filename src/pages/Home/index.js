@@ -1,7 +1,14 @@
 import { useContext, useState, useEffect } from "react";
 import { AuthContext } from "context";
 import { useNavigate } from "react-router-dom";
-import { AddPost, Post, ListOfPosts } from "components";
+import {
+  AddPost,
+  Post,
+  ListOfPosts,
+  addComment,
+  Comment,
+  ListOfComments,
+} from "components";
 import styles from "./Home.module.css";
 import axios from "axios";
 
@@ -27,8 +34,8 @@ export function Home() {
     setPosts(result.data);
   };
 
-   // Function to acquire the comments from the backend
-   const getComments = async () => {
+  // Function to acquire the comments from the backend
+  const getComments = async () => {
     // Endpoint for acquiring posts from the backend
     const url = `${process.env.REACT_APP_BACKEND_URL}/comment`;
     // Request config that is going to hold the authorization
@@ -54,9 +61,9 @@ export function Home() {
       {user ? (
         <div>
           <h1>Home</h1>
-          <AddPost getposts={getPosts} setposts={setPosts} />
+          <AddPost getPosts={getPosts} setPosts={setPosts} />
           <ListOfPosts posts={posts} setPosts={setPosts} getPosts={getPosts} />
-         {/* <Comments getcomments={getComments} setcomments={setComments} /> */}
+          {/* <Comment getComments={getComments} setComments={setComments} /> */}
           <code>{JSON.stringify(user)}</code>
         </div>
       ) : (

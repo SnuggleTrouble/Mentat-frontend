@@ -4,8 +4,16 @@ import axios from "axios";
 import { Support } from "components/Support/Support";
 
 // Receive the id, the content and the setPost function
-export function Post({ id, title, content, category, support, setPosts, post, getPosts }) {
-
+export function Post({
+  id,
+  title,
+  content,
+  category,
+  support,
+  setPosts,
+  post,
+  getPosts,
+}) {
   const [showAll, setShowAll] = useState(false);
   const [edit, setEdit] = useState(false);
   const [newPostTitle, setNewPostTitle] = useState(title);
@@ -32,7 +40,7 @@ export function Post({ id, title, content, category, support, setPosts, post, ge
 
   // handle the change of variable showAll
   const handleShowAll = () => {
-    setShowAll(previousValue => {
+    setShowAll((previousValue) => {
       return !previousValue;
     });
   };
@@ -57,12 +65,21 @@ export function Post({ id, title, content, category, support, setPosts, post, ge
         },
       };
       // make the request
-      const result = await axios.put(url, { title: newPostTitle, content: newPostContent, category: setNewPostCategory }, config);
+      const result = await axios.put(
+        url,
+        {
+          title: newPostTitle,
+          content: newPostContent,
+          category: setNewPostCategory,
+        },
+        config
+      );
       getPosts();
     })();
 
     handleCancel();
   };
+
   return (
     <>
       <div className="post">
@@ -72,7 +89,7 @@ export function Post({ id, title, content, category, support, setPosts, post, ge
           {edit ? (
             <input
               value={newPostTitle}
-              onChange={event => setNewPostTitle(event.target.value)}
+              onChange={(event) => setNewPostTitle(event.target.value)}
             />
           ) : (
             <p>{title}</p>
@@ -81,7 +98,7 @@ export function Post({ id, title, content, category, support, setPosts, post, ge
           {edit ? (
             <textarea
               value={newPostContent}
-              onChange={event => setNewPostContent(event.target.value)}
+              onChange={(event) => setNewPostContent(event.target.value)}
             />
           ) : showAll ? (
             <p>{content}</p>
@@ -96,7 +113,7 @@ export function Post({ id, title, content, category, support, setPosts, post, ge
           {edit ? (
             <select
               value={newPostCategory}
-              onChange={event => setNewPostCategory(event.target.value)}
+              onChange={(event) => setNewPostCategory(event.target.value)}
             />
           ) : (
             <p>{category}</p>
@@ -119,8 +136,8 @@ export function Post({ id, title, content, category, support, setPosts, post, ge
             </div>
           )}
         </div>
-      </div>{" "}
-      <Support support={support} id={id}/>
+      </div>
+      <Support support={support} id={id} />
     </>
   );
 }
