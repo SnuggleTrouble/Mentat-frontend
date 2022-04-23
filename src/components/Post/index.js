@@ -1,11 +1,12 @@
 import { useState } from "react";
 import "./Post.module.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import { Support } from "components/Support/Support";
 import { ListOfComments } from "components/ListOfComments";
 import { AddComment } from "components/AddComment";
 
-// Receive the id, the content and the setPost function
+// Receive the id, the content and the setPost function.
 export function Post({
   id,
   title,
@@ -24,6 +25,15 @@ export function Post({
   const [newPostTitle, setNewPostTitle] = useState(title);
   const [newPostCategory, setNewPostCategory] = useState(category);
   const [newPostContent, setNewPostContent] = useState(content);
+
+  const HandleShowComment() => {
+    return (
+      <button>
+        {user && <Link to="/post/:id">Comments</Link>}
+      </ button>
+    );
+  }
+  
 
   // handle Post deletion
   const handleDelete = () => {
