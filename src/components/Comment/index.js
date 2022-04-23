@@ -28,7 +28,7 @@ export function Comment({ id, content, setComment, comment, getComments }) {
 
   // Handle the change of variable showAll
   const handleShowAll = () => {
-    setShowAll((previousValue) => {
+    setShowAll(previousValue => {
       return !previousValue;
     });
   };
@@ -75,7 +75,7 @@ export function Comment({ id, content, setComment, comment, getComments }) {
           {edit ? (
             <textarea
               value={newCommentContent}
-              onChange={(event) => setNewCommentContent(event.target.value)}
+              onChange={event => setNewCommentContent(event.target.value)}
             />
           ) : (
             <p>{content}</p>
