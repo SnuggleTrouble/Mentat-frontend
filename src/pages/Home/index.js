@@ -5,9 +5,6 @@ import {
   AddPost,
   Post,
   ListOfPosts,
-  addComment,
-  Comment,
-  ListOfComments,
 } from "components";
 import styles from "./Home.module.css";
 import axios from "axios";
@@ -63,7 +60,6 @@ export function Home() {
           <h1>Home</h1>
           <AddPost getPosts={getPosts} setPosts={setPosts} />
           <ListOfPosts posts={posts} setPosts={setPosts} getPosts={getPosts} />
-          {/* <Comment getComments={getComments} setComments={setComments} /> */}
           <code>{JSON.stringify(user)}</code>
         </div>
       ) : (

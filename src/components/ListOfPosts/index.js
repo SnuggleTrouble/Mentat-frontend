@@ -1,4 +1,5 @@
 import { Post } from "components/Post";
+import { ListOfComments } from "../ListOfComments";
 
 export function ListOfPosts({ posts, setPosts, getPosts }) {
   return (
@@ -12,6 +13,7 @@ export function ListOfPosts({ posts, setPosts, getPosts }) {
             title={post.title}
             content={post.content}
             support={post.support}
+            comments={post.comments}
             category={post.category}
             setPosts={setPosts}
             post={post}
