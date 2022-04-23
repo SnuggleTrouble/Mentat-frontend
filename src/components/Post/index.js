@@ -6,7 +6,7 @@ import { Support } from "components/Support/Support";
 import { ListOfComments } from "components/ListOfComments";
 import { AddComment } from "components/AddComment";
 
-// Receive the id, the content and the setPost function
+// Receive the id, the content and the setPost function.
 export function Post({
   id,
   title,
