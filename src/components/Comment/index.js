@@ -3,13 +3,20 @@ import "./Comment.module.css";
 import axios from "axios";
 
 // Receive the id, the content and the setComment function
-export function Comment({ id, content, setComment, comment, getComments }) {
+export function Comment({
+  id,
+  content,
+  setComment,
+  comment,
+  getComments,
+  deleteComment,
+}) {
   const [showAll, setShowAll] = useState(false);
   const [edit, setEdit] = useState(false);
   const [newCommentContent, setNewCommentContent] = useState(content);
 
   // handle Comment deletion
-  const handleDelete = () => {
+  const handleDelete = commentId => {
     (async function () {
       // Endpoint for DELETING comments from the backend
       const url = `${process.env.REACT_APP_BACKEND_URL}/comment/${id}`;
@@ -19,10 +26,11 @@ export function Comment({ id, content, setComment, comment, getComments }) {
           authorization: localStorage.getItem("token"),
         },
       };
+
       // Make the request
       const result = await axios.delete(url, config);
-
-      getComments();
+      console.log(result.data)
+      deleteComment(commentId);
     })();
   };
 
@@ -70,7 +78,7 @@ export function Comment({ id, content, setComment, comment, getComments }) {
     <>
       <div className="comment">
         <div className="comment_input">
-          <div className="username">{`${comment.user.userName}`}</div>
+          <div className="username">{`${comment.user}`}</div>
 
           {edit ? (
             <textarea
@@ -89,7 +97,13 @@ export function Comment({ id, content, setComment, comment, getComments }) {
           ) : (
             <div className="comment_actions">
               <button onClick={handleEdit}>Edit</button>
-              <button onClick={handleDelete}>Delete</button>
+              <button
+                onClick={() => {
+                  handleDelete(comment._id);
+                }}
+              >
+                Delete
+              </button>
             </div>
           )}
         </div>

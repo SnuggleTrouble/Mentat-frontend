@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import axios from "axios";
 import "./Comments.module.css";
+import { AuthContext } from "context";
 
-export function AddComment({ getComments }) {
+export function AddComment({ id, getComments, updateComments, individualPost, setIndividualPost }) {
   const [commentContent, setCommentContent] = useState("");
+  const { user } = useContext(AuthContext);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -12,7 +14,7 @@ export function AddComment({ getComments }) {
       content: commentContent,
     };
     // url of the endpoint for posts
-    const url = `${process.env.REACT_APP_BACKEND_URL}/comment`;
+    const url = `${process.env.REACT_APP_BACKEND_URL}/comment/${id}`;
     // request configuration for adding a header with authorization
     const config = {
       headers: {
@@ -22,8 +24,13 @@ export function AddComment({ getComments }) {
     };
     // make a request with axios
     const comment = await axios.post(url, data, config);
+    const postCopy = JSON.parse(JSON.stringify(individualPost))
+    postCopy.comments.push(comment.data)
+    setIndividualPost(postCopy)
+    console.log(comment)
     // get posts from the backend
-    getComments();
+    /* setCommentContent("") */
+    /* updateComments(user.userName, commentContent) */
   };
 
   return (
