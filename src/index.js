@@ -27,18 +27,12 @@ ReactDOM.render(
               element={
                 <PrivateRoute>
                   <Home />
-                 {/*  <PostPage path="/post/:id" /> */}
+                  {/*  <PostPage path="/post/:id" /> */}
                 </PrivateRoute>
               }
             />
-            <Route
-              path="/post/:id"
-              element={
-                
-                  <PostPage />
-                
-              }
-            />
+            <Route path="/post/:id" element={<PostPage />} />
+            <Route path="/post/categories" element={<Category />} />
             <Route path="login" element={<LoginPage />} />
             <Route path="landing" element={<Landing />} />
             <Route path="signup" element={<SignupPage />} />
