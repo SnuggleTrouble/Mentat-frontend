@@ -8,3 +8,4 @@ export { Login } from "./Login";
 export { Navbar } from "./Navbar";
 export { PrivateRoute } from "./PrivateRoute";
 export { Signup } from "./Signup";
+export { CategoryFilter } from "./Categories";
