@@ -4,4 +4,4 @@ export { LoginPage } from "./LoginPage";
 export { NotFound } from "./NotFound";
 export { SignupPage } from "./SignupPage";
 export { PostPage } from "./PostPage";
-export { Search } from "./Search";
+export { Category } from "./Category";
