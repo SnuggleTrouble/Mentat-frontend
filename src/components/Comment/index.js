@@ -29,7 +29,7 @@ export function Comment({
 
       // Make the request
       const result = await axios.delete(url, config);
-      console.log(result.data)
+      console.log(result.data);
       deleteComment(commentId);
     })();
   };

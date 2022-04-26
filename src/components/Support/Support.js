@@ -22,13 +22,13 @@ export function Support({ support, id }) {
     if (!counter.includes(userId)) {
       await setCounter(previousCount => [...previousCount, userId]);
       axios.put(url, { support: userId }, config);
-    } else { 
-      let counterCopy = [...counter]
-      const filterId = counterCopy.filter((c) => {
-      return c !== userId 
-      }) 
-      setCounter(filterId)
-      axios.put(urlUnsupport, { support: userId }, config); 
+    } else {
+      let counterCopy = [...counter];
+      const filterId = counterCopy.filter(c => {
+        return c !== userId;
+      });
+      setCounter(filterId);
+      axios.put(urlUnsupport, { support: userId }, config);
     }
   };
 

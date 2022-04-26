@@ -8,7 +8,7 @@ export function AuthContextProvider({ children }) {
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
 
-  const saveToken = (token) => {
+  const saveToken = token => {
     localStorage.setItem("token", `Bearer ${token}`);
   };
 

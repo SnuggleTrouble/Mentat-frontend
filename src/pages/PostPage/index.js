@@ -22,11 +22,11 @@ export function PostPage({ setComments, getComments }) {
   };
   const deleteComment = id => {
     let updatedPost = JSON.parse(JSON.stringify(individualPost));
-    console.log(id, updatedPost, "This is a string we need to find")
+    console.log(id, updatedPost, "This is a string we need to find");
     let filteredComments = updatedPost.comments.filter(individualComment => {
       return individualComment._id !== id;
     });
-    updatedPost.comments = filteredComments
+    updatedPost.comments = filteredComments;
     setIndividualPost(updatedPost);
   };
   useEffect(() => {
