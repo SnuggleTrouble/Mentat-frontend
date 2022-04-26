@@ -8,7 +8,7 @@ export function AddPost({ getPosts }) {
   const [postContent, setPostContent] = useState("");
   const [postCategory, setPostCategory] = useState("");
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async event => {
     event.preventDefault();
     // Data to send in the request body
     const data = {
@@ -36,15 +36,15 @@ export function AddPost({ getPosts }) {
       <div className="post_content">
         <input
           value={postTitle}
-          onChange={(event) => setPostTitle(event.target.value)}
+          onChange={event => setPostTitle(event.target.value)}
         />
         <textarea
           value={postContent}
-          onChange={(event) => setPostContent(event.target.value)}
+          onChange={event => setPostContent(event.target.value)}
         />
         <select
           value={postCategory}
-          onChange={(event) => setPostCategory(event.target.value)}
+          onChange={event => setPostCategory(event.target.value)}
         >
           <option value="" selected disabled hidden>
             Select Category

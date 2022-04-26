@@ -27,7 +27,6 @@ export function Post({
   const [newPostContent, setNewPostContent] = useState(content);
   const navigate = useNavigate();
 
-
   const handleShowComment = () => {
     return navigate(`/post/${id}`);
   };

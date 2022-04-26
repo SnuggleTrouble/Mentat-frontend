@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Post } from "../Post/index.js";
 import axios from "axios";
 import "./Categories.module.css";
-import {ListOfPosts} from "components";
+import { ListOfPosts } from "components";
 
 const categories = [
   { id: "1", category: "Addiction" },
@@ -17,7 +17,7 @@ const categories = [
 export function CategoryFilter(category, post) {
   const [posts, setPosts] = useState([]);
 
-  const fetchPosts = async (category) => {
+  const fetchPosts = async category => {
     const url = `${process.env.REACT_APP_BACKEND_URL}/post/categories`;
     const config = {
       headers: {
@@ -32,7 +32,7 @@ export function CategoryFilter(category, post) {
   return (
     <div>
       <ul>
-        {categories.map((category) => {
+        {categories.map(category => {
           return (
             <li>
               <button onClick={() => fetchPosts(category.category)}>

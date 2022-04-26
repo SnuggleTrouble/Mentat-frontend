@@ -3,11 +3,17 @@ import axios from "axios";
 import "./Comments.module.css";
 import { AuthContext } from "context";
 
-export function AddComment({ id, getComments, updateComments, individualPost, setIndividualPost }) {
+export function AddComment({
+  id,
+  getComments,
+  updateComments,
+  individualPost,
+  setIndividualPost,
+}) {
   const [commentContent, setCommentContent] = useState("");
   const { user } = useContext(AuthContext);
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async event => {
     event.preventDefault();
     // Data to send in the request body
     const data = {
@@ -24,10 +30,10 @@ export function AddComment({ id, getComments, updateComments, individualPost, se
     };
     // make a request with axios
     const comment = await axios.post(url, data, config);
-    const postCopy = JSON.parse(JSON.stringify(individualPost))
-    postCopy.comments.push(comment.data)
-    setIndividualPost(postCopy)
-    console.log(comment)
+    const postCopy = JSON.parse(JSON.stringify(individualPost));
+    postCopy.comments.push(comment.data);
+    setIndividualPost(postCopy);
+    console.log(comment);
     // get posts from the backend
     /* setCommentContent("") */
     /* updateComments(user.userName, commentContent) */
@@ -38,7 +44,7 @@ export function AddComment({ id, getComments, updateComments, individualPost, se
       <div>
         <textarea
           value={commentContent}
-          onChange={(event) => setCommentContent(event.target.value)}
+          onChange={event => setCommentContent(event.target.value)}
         />
         <button type="submit">Create Comment</button>
       </div>

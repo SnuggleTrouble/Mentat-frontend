@@ -3,4 +3,5 @@ export { Landing } from "./Landing";
 export { LoginPage } from "./LoginPage";
 export { NotFound } from "./NotFound";
 export { SignupPage } from "./SignupPage";
-export {PostPage} from "./PostPage"
+export { PostPage } from "./PostPage";
+export { Search } from "./Search";
