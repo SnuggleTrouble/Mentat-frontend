@@ -11,6 +11,7 @@ import {
   SignupPage,
   LoginPage,
   PostPage,
+  Category,
 } from "pages";
 import { PrivateRoute } from "components";
 import { AuthContextProvider } from "context";
@@ -26,7 +27,7 @@ ReactDOM.render(
               element={
                 <PrivateRoute>
                   <Home />
-                  <PostPage path="/post/:id" />
+                 {/*  <PostPage path="/post/:id" /> */}
                 </PrivateRoute>
               }
             />
