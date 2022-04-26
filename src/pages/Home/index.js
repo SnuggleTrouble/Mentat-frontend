@@ -55,7 +55,7 @@ export function Home() {
         <div>
           <h1>Home</h1>
           <AddPost getPosts={getPosts} setPosts={setPosts} />
-          <CategoryFilter />
+          {/* <CategoryFilter /> */}
           <ListOfPosts posts={posts} setPosts={setPosts} getPosts={getPosts} />
           <code>{JSON.stringify(user)}</code>
         </div>
