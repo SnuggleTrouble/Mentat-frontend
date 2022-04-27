@@ -1,10 +1,8 @@
 import { useState } from "react";
 import "./Post.module.css";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Support } from "components/Support/Support";
-import { ListOfComments } from "components/ListOfComments";
-import { AddComment } from "components/AddComment";
 
 // Receive the id, the content and the setPost function.
 export function Post({
@@ -16,9 +14,6 @@ export function Post({
   setPosts,
   post,
   getPosts,
-  comments,
-  getComments,
-  setComments,
 }) {
   const [showAll, setShowAll] = useState(false);
   const [edit, setEdit] = useState(false);
@@ -81,7 +76,7 @@ export function Post({
         {
           title: newPostTitle,
           content: newPostContent,
-          category: setNewPostCategory,
+          category: newPostCategory,
         },
         config
       );
@@ -125,7 +120,18 @@ export function Post({
             <select
               value={newPostCategory}
               onChange={event => setNewPostCategory(event.target.value)}
-            />
+            >
+              <option value="" selected disabled hidden>
+                Select Category
+              </option>
+              <option value="Addiction">Addiction</option>
+              <option value="Anxiety">Anxiety</option>
+              <option value="Burnout">Burnout</option>
+              <option value="Depression">Depression</option>
+              <option value="Eating Disorders">Eating Disorders</option>
+              <option value="OCD">OCD</option>
+              <option value="PTSD">PTSD</option>
+            </select>
           ) : (
             <p>{category}</p>
           )}
