@@ -53,7 +53,7 @@ export function AddPost({ getPosts }) {
           <option value="Anxiety">Anxiety</option>
           <option value="Burnout">Burnout</option>
           <option value="Depression">Depression</option>
-          <option value="Eating disorders">Eating Disorders</option>
+          <option value="Eating Disorders">Eating Disorders</option>
           <option value="OCD">OCD</option>
           <option value="PTSD">PTSD</option>
         </select>

@@ -34,7 +34,6 @@ export function Support({ support, id }) {
 
   return (
     <div>
-      {console.log(counter)}
       <h1 className="counter">{counter.length}</h1>
 
       <button className="supportCount" onClick={supportHandler}>

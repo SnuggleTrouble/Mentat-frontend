@@ -15,7 +15,7 @@ export function ListOfComments({
             <Comment
               key={comment._id}
               id={comment._id}
-              content={comment.content}
+              commentContent={comment.commentContent}
               setComments={setComments}
               comment={comment}
               getComments={getComments}

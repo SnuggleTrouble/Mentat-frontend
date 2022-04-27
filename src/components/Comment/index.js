@@ -5,15 +5,16 @@ import axios from "axios";
 // Receive the id, the content and the setComment function
 export function Comment({
   id,
-  content,
+  commentContent,
   setComment,
   comment,
   getComments,
   deleteComment,
+  updateComment,
 }) {
   const [showAll, setShowAll] = useState(false);
   const [edit, setEdit] = useState(false);
-  const [newCommentContent, setNewCommentContent] = useState(content);
+  const [newCommentContent, setNewCommentContent] = useState(commentContent);
 
   // handle Comment deletion
   const handleDelete = commentId => {
@@ -29,7 +30,6 @@ export function Comment({
 
       // Make the request
       const result = await axios.delete(url, config);
-      console.log(result.data);
       deleteComment(commentId);
     })();
   };
@@ -64,7 +64,7 @@ export function Comment({
       const result = await axios.put(
         url,
         {
-          content: newCommentContent,
+          commentContent: newCommentContent,
         },
         config
       );
@@ -85,8 +85,14 @@ export function Comment({
               value={newCommentContent}
               onChange={event => setNewCommentContent(event.target.value)}
             />
-          ) : (
-            <p>{content}</p>
+          ) : showAll ? (
+            <p>{commentContent}</p>
+            ) : (
+            <p>
+              {commentContent.length > 100
+                ? `${commentContent.substring(0, 100)}...`
+                : commentContent}
+            </p>
           )}
 
           {edit ? (
@@ -96,6 +102,11 @@ export function Comment({
             </div>
           ) : (
             <div className="comment_actions">
+            {commentContent.length > 100 && (
+                <button onClick={handleShowAll}>
+                  {showAll ? "Read less" : "Read more"}
+                </button>
+              )}
               <button onClick={handleEdit}>Edit</button>
               <button
                 onClick={() => {

@@ -5,8 +5,6 @@ import { AuthContext } from "context";
 
 export function AddComment({
   id,
-  getComments,
-  updateComments,
   individualPost,
   setIndividualPost,
 }) {
@@ -17,7 +15,7 @@ export function AddComment({
     event.preventDefault();
     // Data to send in the request body
     const data = {
-      content: commentContent,
+      commentContent: commentContent,
     };
     // url of the endpoint for posts
     const url = `${process.env.REACT_APP_BACKEND_URL}/comment/${id}`;
@@ -33,10 +31,6 @@ export function AddComment({
     const postCopy = JSON.parse(JSON.stringify(individualPost));
     postCopy.comments.push(comment.data);
     setIndividualPost(postCopy);
-    console.log(comment);
-    // get posts from the backend
-    /* setCommentContent("") */
-    /* updateComments(user.userName, commentContent) */
   };
 
   return (
