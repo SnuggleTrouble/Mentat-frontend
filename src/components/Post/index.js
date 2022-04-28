@@ -124,13 +124,19 @@ export function Post({
               <option value="" selected disabled hidden>
                 Select Category
               </option>
-              <option value="Addiction">Addiction</option>
-              <option value="Anxiety">Anxiety</option>
-              <option value="Burnout">Burnout</option>
+              <option value="Addiction">Addiction & Substance Abuse</option>
+              <option value="ADHD">ADHD</option>
+              <option value="Anger">Anger</option>
+              <option value="Anxiety Disorders">Anxiety & Panic Attacks</option>
               <option value="Depression">Depression</option>
               <option value="Eating Disorders">Eating Disorders</option>
-              <option value="OCD">OCD</option>
-              <option value="PTSD">PTSD</option>
+              <option value="OCD">Obsessive-compulsive Disorder</option>
+              <option value="Insomnia">Insomnia</option>
+              <option value="PTSD">Post-Traumatic Stress Disorder</option>
+              <option value="Psychotic Disorders">Psychotic Disorders</option>
+              <option value="Self-esteem">Self-esteem</option>
+              <option value="Stress">Stress</option>
+              <option value="Suicidal Feelings">Suicidal Feelings</option>
             </select>
           ) : (
             <p>{category}</p>
