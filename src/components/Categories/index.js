@@ -1,17 +1,23 @@
 import { useState } from "react";
 import { Post } from "../Post/index.js";
 import axios from "axios";
-import "./Categories.module.css";
+import styles from "./Categories.module.css";
 import { ListOfPosts } from "components";
 
 const categories = [
   { id: "1", category: "Addiction" },
-  { id: "2", category: "Anxiety" },
-  { id: "3", category: "Burnout" },
-  { id: "4", category: "Depression" },
-  { id: "5", category: "Eating Disorders" },
-  { id: "6", category: "OCD" },
-  { id: "7", category: "PTSD" },
+  { id: "2", category: "ADHD" },
+  { id: "3", category: "Anger" },
+  { id: "4", category: "Anxiety Disorders" },
+  { id: "5", category: "Depression" },
+  { id: "6", category: "Eating Disorders" },
+  { id: "7", category: "OCD" },
+  { id: "8", category: "Insomnia" },
+  { id: "9", category: "PTSD" },
+  { id: "10", category: "Psychotic Disorders" },
+  { id: "11", category: "Self-esteem" },
+  { id: "12", category: "Stress" },
+  { id: "13", category: "Suicidal Feelings" },
 ];
 
 export function CategoryFilter(category, post) {
@@ -35,7 +41,7 @@ export function CategoryFilter(category, post) {
         {categories.map(category => {
           return (
             <li>
-              <button onClick={() => fetchPosts(category.category)}>
+              <button className={styles.linkBtn} onClick={() => fetchPosts(category.category)}>
                 {category.category}
               </button>
             </li>
