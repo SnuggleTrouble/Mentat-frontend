@@ -1,6 +1,7 @@
 import { createContext, useState, useEffect } from "react";
 import { client } from "client";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export const AuthContext = createContext();
 
@@ -46,6 +47,20 @@ export function AuthContextProvider({ children }) {
     }
   };
 
+  const getComments = async () => {
+    // Endpoint for acquiring posts from the backend
+    const url = `${process.env.REACT_APP_BACKEND_URL}/comment`;
+    // Request config that is going to hold the authorization
+    const config = {
+      headers: {
+        authorization: localStorage.getItem("token"),
+      },
+    };
+    // make the request
+    const result = await axios.get(url, config);
+    return result.data;
+  };
+
   const verify = async () => {
     try {
       const response = await client.get("/auth/verify");
@@ -71,6 +86,7 @@ export function AuthContextProvider({ children }) {
     signup,
     login,
     logout,
+    getComments,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

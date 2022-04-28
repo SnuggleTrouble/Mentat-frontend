@@ -48,7 +48,7 @@ export function PostPage({ setComments, getComments }) {
           <ListOfComments
             comments={individualPost.comments}
             setComments={setComments}
-            getComments={getComments}
+            fetchPost={fetchPost}
             deleteComment={deleteComment}
           />
         </div>

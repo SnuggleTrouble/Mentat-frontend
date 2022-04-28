@@ -11,9 +11,11 @@ export function Post({
   content,
   category,
   support,
+  getComments, 
   setPosts,
   post,
   getPosts,
+  createdAt, 
 }) {
   const [showAll, setShowAll] = useState(false);
   const [edit, setEdit] = useState(false);
