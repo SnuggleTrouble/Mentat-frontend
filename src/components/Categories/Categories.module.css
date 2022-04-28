@@ -1,0 +1,52 @@
+li {
+  text-shadow: rgba(0, 0, 0, 1) 0 4px 12px;
+  list-style-type: none;
+}
+
+/*--- Buttons ---*/
+.linkBtn {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #177cc0b4;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(0.875rem - 1px) calc(1.2rem - 1px);
+  margin-top: 5px;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: 30vw;
+  max-width: 300px;
+}
+
+.linkBtn:hover,
+.linkBtn:focus {
+  background-color: rgb(219, 143, 43);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.linkBtn:hover {
+  transform: translateY(-1px);
+}
+
+.linkBtn:active {
+  background-color: #be7c02;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  transform: translateY(0);
+}

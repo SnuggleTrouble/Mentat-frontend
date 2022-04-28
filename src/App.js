@@ -7,7 +7,7 @@ function App() {
     <div>
       <Navbar />
       <Outlet />
-      Footer
+      Footer should appear at the end
     </div>
   );
 }
