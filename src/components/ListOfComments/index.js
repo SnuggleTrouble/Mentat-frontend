@@ -3,7 +3,7 @@ import { Comment } from "components/Comment";
 export function ListOfComments({
   comments,
   setComments,
-  getComments,
+  fetchPost,
   deleteComment,
 }) {
   return (
@@ -14,11 +14,11 @@ export function ListOfComments({
           return (
             <Comment
               key={comment._id}
+              fetchPost={fetchPost}
               id={comment._id}
               commentContent={comment.commentContent}
               setComments={setComments}
               comment={comment}
-              getComments={getComments}
               deleteComment={deleteComment}
             />
           );

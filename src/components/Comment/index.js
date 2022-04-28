@@ -1,14 +1,15 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import "./Comment.module.css";
 import axios from "axios";
+import { AuthContext } from "context";
 
 // Receive the id, the content and the setComment function
 export function Comment({
+  fetchPost,
   id,
   commentContent,
   setComment,
   comment,
-  getComments,
   deleteComment,
   updateComment,
 }) {
@@ -68,7 +69,7 @@ export function Comment({
         },
         config
       );
-      getComments();
+      fetchPost();
     })();
 
     handleCancel();
