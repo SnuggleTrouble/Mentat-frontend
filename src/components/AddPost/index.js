@@ -29,6 +29,9 @@ export function AddPost({ getPosts }) {
     const post = await axios.post(url, data, config);
     // get posts from the backend
     getPosts();
+    setPostTitle("");
+    setPostContent("");
+    setPostCategory("");
   };
 
   return (

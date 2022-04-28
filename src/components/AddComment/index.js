@@ -31,6 +31,7 @@ export function AddComment({
     const postCopy = JSON.parse(JSON.stringify(individualPost));
     postCopy.comments.push(comment.data);
     setIndividualPost(postCopy);
+    setCommentContent("")
   };
 
   return (
