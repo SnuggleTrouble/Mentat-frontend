@@ -4,7 +4,7 @@ import { ListOfComments } from "../ListOfComments";
 export function ListOfPosts({ posts, setPosts, getPosts }) {
   return (
     <div>
-      {posts.map(post => {
+      {posts.slice(0).reverse().map(post => {
         // Pass the id, the content and the setPosts function
         return (
           <Post

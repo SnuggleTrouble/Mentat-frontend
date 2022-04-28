@@ -9,7 +9,7 @@ export function ListOfComments({
   return (
     <div>
       {comments &&
-        comments.map(comment => {
+        comments.slice(0).reverse().map(comment => {
           // Pass the id, the content and the setComments function
           return (
             <Comment
