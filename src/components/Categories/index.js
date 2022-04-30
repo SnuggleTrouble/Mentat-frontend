@@ -41,7 +41,7 @@ export function CategoryFilter(category, post) {
         {categories.map(category => {
           return (
             <li>
-              <button className={styles.linkBtn} onClick={() => fetchPosts(category.category)}>
+              <button onClick={() => fetchPosts(category.category)}>
                 {category.category}
               </button>
             </li>

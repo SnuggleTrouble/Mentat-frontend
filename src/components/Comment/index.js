@@ -77,9 +77,9 @@ export function Comment({
 
   return (
     <>
-      <div className="comment">
-        <div className="comment_input">
-          <div className="username">{`${comment.user}`}</div>
+      <div >
+        <div >
+          <div >{`${comment.user}`}</div>
 
           {edit ? (
             <textarea
@@ -97,12 +97,12 @@ export function Comment({
           )}
 
           {edit ? (
-            <div className="comment_actions">
+            <div >
               <button onClick={handleSave}>Save</button>
               <button onClick={handleCancel}>Cancel</button>
             </div>
           ) : (
-            <div className="comment_actions">
+            <div >
             {commentContent.length > 100 && (
                 <button onClick={handleShowAll}>
                   {showAll ? "Read less" : "Read more"}

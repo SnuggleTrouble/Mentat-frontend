@@ -5,9 +5,10 @@ import { useContext } from "react";
 export function LoginPage() {
   const { user } = useContext(AuthContext);
   return (
-    <div>
-      <h1>Log in to your awesome account</h1>
-      <Login />
+    <div className="flex min-h-screen justify-center p-20 box-border bg-white">
+    <div className="">
+    <Login />
+    </div>
     </div>
   );
 }

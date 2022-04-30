@@ -1,13 +1,16 @@
 import { Outlet } from "react-router-dom";
-import styles from "./App.module.css";
 import { Navbar } from "components";
 
 function App() {
   return (
-    <div>
+    <div className=" bg-emerald-50 ">
       <Navbar />
       <Outlet />
-      Footer should appear at the end
+    <footer className="p-5 flex flex-col justify-items-center flex-wrap justify-between align-middles">
+    <p className="flex justify-center">
+    Made with love in Europe 🇪🇺 by  <a href="https://twitter.com/productandres">@productandres & @stälebjørdal</a> </p>
+  
+    </footer>
     </div>
   );
 }

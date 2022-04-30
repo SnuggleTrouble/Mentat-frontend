@@ -1,5 +1,4 @@
 import { Post } from "components/Post";
-import { ListOfComments } from "../ListOfComments";
 
 export function ListOfPosts({ posts, setPosts, getPosts }) {
   return (
