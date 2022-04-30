@@ -12,7 +12,7 @@ export function Login() {
     login(email, password);
   };
   return (
-    <div className="bg-emerald-100 p-20 rounded-xl">
+    <div className="bg-emerald-100 p-20 rounded-xl flex jus">
     <form  className="" conSubmit={handleSubmit}>
     <div className="flex justify-center flex-col ">
     <h2 className="font-bold mb-10 text-2xl">Login into your awesome account</h2>

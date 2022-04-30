@@ -15,11 +15,12 @@ export function Signup() {
   };
 
   return (
-    <div className="md:container md:mx-auto p-20 rounded-xl">
-    <form onSubmit={handleSubmit}>
-      <h2 className="text-xl mb-5 text-amber-500	decoration-8">Signup</h2>
-      <div>
-        <input className="m-2"
+    <div className=" p-20 bg-emerald-100 rounded-xl">
+    <form className=""onSubmit={handleSubmit}>
+      <h2 className="mb-5 text-black font-bold text-2xl">Join an awesome community</h2>
+      <div className="flex flex-col gap-2">
+        <input className="bg-emerald-50 py-1 rounded-md my-2"
+          placeholder="Your first name goes here"
           type="firstname"
           name="firstname"
           autoComplete="off"
@@ -33,8 +34,9 @@ export function Signup() {
           <span>First Name</span>
         </label>
       </div>
-      <div>
-        <input className="m-2"
+      <div className="flex flex-col">
+        <input className="bg-emerald-50 py-1 rounded-md my-2"
+               placeholder="Your last name goes here"
           type="lastname"
           name="lastname"
           autoComplete="off"
@@ -48,9 +50,10 @@ export function Signup() {
           <span >Last Name</span>
         </label>
       </div>
-      <div>
+      <div className="flex flex-col gap-2">
         <input
-        className="m-2"
+        className="bg-emerald-50 py-1 rounded-md my-2"
+        placeholder="Your username goes here"
           type="username"
           name="username"
           autoComplete="off"
@@ -64,9 +67,10 @@ export function Signup() {
           <span>Username</span>
         </label>
       </div>
-      <div >
+      <div className="flex flex-col gap-2">
         <input
-        className="m-2"
+        className="bg-emerald-50 py-1 rounded-md my-2"
+        placeholder="Your email goes here"
           type="email"
           name="email"
           autoComplete="off"
@@ -80,9 +84,10 @@ export function Signup() {
           <span>Email</span>
         </label>
       </div>
-      <div>
+      <div className="flex flex-col">
         <input
-        className="m-2"
+        className="bg-emerald-50 py-1 rounded-md my-2"
+        placeholder="Your password goes here"
           type="password"
           name="password"
           autoComplete="off"
@@ -96,7 +101,8 @@ export function Signup() {
           <span>Password</span>
         </label>
       </div>
-      <button type="submit">
+      <button className= " bg-emerald-500 w-20 px-20 py-2 flex justify-center rounded-lg text-emerald-900 text-lg mt-5"type="submit">
+      Signup
       </button>
     </form>
     </div>

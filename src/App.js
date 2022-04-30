@@ -8,7 +8,7 @@ function App() {
       <Outlet />
     <footer className="p-5 flex flex-col justify-items-center flex-wrap justify-between align-middles">
     <p className="flex justify-center">
-    Made with love in Europe 🇪🇺 by  <a href="https://twitter.com/productandres">@productandres & @stälebjørdal</a> </p>
+    Made with ❤️ in Europe 🇪🇺 by  <a href="https://twitter.com/productandres">@productandres & @stälebjørdal</a> </p>
   
     </footer>
     </div>

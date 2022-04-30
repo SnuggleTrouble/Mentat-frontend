@@ -20,20 +20,20 @@ export function Landing() {
     </div>
     {/*section#2*/}
     <div className="bg-white p-20 flex my-10 flex-row justify-between gap-10 text-stone-700">
-    <div className="flex justify-center flex-col p-10 border-2 rounded-xl border-gray-100 bg-gray-100 justify-center ">
-      <img className="mb-5" src="https://cdn-icons.flaticon.com/png/512/3364/premium/3364924.png?token=exp=1651329208~hmac=5daeb34872ba99c3a017be43494e21d2" width={80}></img>
-      <h1 className="font-bold text-emerald-500 text-xl">Moderated by the community</h1>
-      <p> Interact with others in an safe enviroment where moderators ensure that our communication is safe and respectful. </p>
+    <div className="p-10 border-2 rounded-xl border-gray-100 bg-gray-100 justify-center">
+      <img className="mb-5" src="https://cdn-icons.flaticon.com/png/512/3166/premium/3166003.png?token=exp=1651329546~hmac=518baa61cb6095d2dbe41a322e096c60" width={80}></img>
+      <h1 className="font-bold text-emerald-500 text-xl mb-5">The support you need</h1>
+      <p> Our community is designed for people to support each other and to interact with people going through similar issues.  </p>
     </div>
     <div className="p-10 border-2 rounded-xl border-gray-100 bg-gray-100 justify-center">
       <img className="mb-5" src="https://cdn-icons-png.flaticon.com/512/1161/1161439.png" width={80}></img>
-      <h1 className="font-bold text-emerald-500 text-xl">No sensitive data collected </h1>
-      <p> We don't collect any senstitive data about you like your real name, or your address or data about your usage in our forum. </p>
+      <h1 className="font-bold text-emerald-500 text-xl mb-5">No sensitive data collected </h1>
+      <p> We don't collect any senstitive data about you, like your real name, your address, or data about the usage of the platform. </p>
     </div>
-    <div className="p-10 border-2 rounded-xl border-gray-100 bg-gray-100 justify-center">
-      <img className="mb-5" src="https://cdn-icons.flaticon.com/png/512/3166/premium/3166003.png?token=exp=1651329546~hmac=518baa61cb6095d2dbe41a322e096c60" width={80}></img>
-      <h1 className="font-bold text-emerald-500 text-xl">The support you need</h1>
-      <p> Our community is designed for people to support each other and to interact with people going through similar issues.  </p>
+    <div className="flex justify-center flex-col p-10 border-2 rounded-xl border-gray-100 bg-gray-100 justify-center ">
+      <img className="mb-5" src="https://cdn-icons.flaticon.com/png/512/3364/premium/3364924.png?token=exp=1651329208~hmac=5daeb34872ba99c3a017be43494e21d2" width={80}></img>
+      <h1 className="font-bold text-emerald-500 text-xl mb-5">Moderated by the community</h1>
+      <p> Interact with others in an safe enviroment where moderators ensure that our communication is safe and respectful. </p>
     </div>
     </div>
   
