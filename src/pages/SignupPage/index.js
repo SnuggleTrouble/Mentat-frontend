@@ -5,9 +5,10 @@ import { useContext } from "react";
 export function SignupPage() {
   const { user } = useContext(AuthContext);
   return (
+    <div className= "flex min-h-screen justify-center box-border bg-white p-20">
     <div>
-      <h1>Join an awesome community</h1>
-      <Signup />
+    <Signup />
+    </div>
     </div>
   );
 }

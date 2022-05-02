@@ -90,9 +90,9 @@ export function Post({
 
   return (
     <>
-      <div className="post">
-        <div className="post_input">
-          <div className="username">{`${post.user.userName}`}</div>
+      <div >
+        <div >
+          <div >{`${post.user.userName}`}</div>
 
           {edit ? (
             <input
@@ -145,12 +145,12 @@ export function Post({
           )}
 
           {edit ? (
-            <div className="post_actions">
+            <div >
               <button onClick={handleSave}>Save</button>
               <button onClick={handleCancel}>Cancel</button>
             </div>
           ) : (
-            <div className="post_actions">
+            <div >
               {content.length > 100 && (
                 <button onClick={handleShowAll}>
                   {showAll ? "Read less" : "Read more"}

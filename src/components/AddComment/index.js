@@ -35,7 +35,7 @@ export function AddComment({
   };
 
   return (
-    <form onSubmit={handleSubmit} className="comment">
+    <form onSubmit={handleSubmit}>
       <div>
         <textarea
           value={commentContent}

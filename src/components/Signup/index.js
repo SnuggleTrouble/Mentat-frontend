@@ -1,4 +1,3 @@
-import styles from "./Signup.module.css";
 import { useState, useContext } from "react";
 import { AuthContext } from "../../context";
 
@@ -16,11 +15,12 @@ export function Signup() {
   };
 
   return (
-    <form className={styles.loginForm} onSubmit={handleSubmit}>
-      <h2>Signup</h2>
-      <div className={styles.formInputMaterial}>
-        <input
-          className={styles.inputArea}
+    <div className=" p-20 bg-emerald-100 rounded-xl">
+    <form className=""onSubmit={handleSubmit}>
+      <h2 className="mb-5 text-black font-bold text-2xl">Join an awesome community</h2>
+      <div className="flex flex-col gap-2">
+        <input className="bg-emerald-50 py-1 rounded-md my-2"
+          placeholder="Your first name goes here"
           type="firstname"
           name="firstname"
           autoComplete="off"
@@ -30,13 +30,13 @@ export function Signup() {
             setFirstName(e.target.value);
           }}
         />
-        <label className={styles.labelName} htmlFor="firstName">
-          <span className={styles.contentName}>First Name</span>
+        <label htmlFor="firstName">
+          <span>First Name</span>
         </label>
       </div>
-      <div className={styles.formInputMaterial}>
-        <input
-          className={styles.inputArea}
+      <div className="flex flex-col">
+        <input className="bg-emerald-50 py-1 rounded-md my-2"
+               placeholder="Your last name goes here"
           type="lastname"
           name="lastname"
           autoComplete="off"
@@ -46,13 +46,14 @@ export function Signup() {
             setLastName(e.target.value);
           }}
         />
-        <label className={styles.labelName} htmlFor="lastName">
-          <span className={styles.contentName}>Last Name</span>
+        <label htmlFor="lastName">
+          <span >Last Name</span>
         </label>
       </div>
-      <div className={styles.formInputMaterial}>
+      <div className="flex flex-col gap-2">
         <input
-          className={styles.inputArea}
+        className="bg-emerald-50 py-1 rounded-md my-2"
+        placeholder="Your username goes here"
           type="username"
           name="username"
           autoComplete="off"
@@ -62,13 +63,14 @@ export function Signup() {
             setUserName(e.target.value);
           }}
         />
-        <label className={styles.labelName} htmlFor="userName">
-          <span className={styles.contentName}>Username</span>
+        <label htmlFor="userName">
+          <span>Username</span>
         </label>
       </div>
-      <div className={styles.formInputMaterial}>
+      <div className="flex flex-col gap-2">
         <input
-          className={styles.inputArea}
+        className="bg-emerald-50 py-1 rounded-md my-2"
+        placeholder="Your email goes here"
           type="email"
           name="email"
           autoComplete="off"
@@ -78,13 +80,14 @@ export function Signup() {
             setEmail(e.target.value);
           }}
         />
-        <label className={styles.labelName} htmlFor="email">
-          <span className={styles.contentName}>Email</span>
+        <label htmlFor="email">
+          <span>Email</span>
         </label>
       </div>
-      <div className={styles.formInputMaterial}>
+      <div className="flex flex-col">
         <input
-          className={styles.inputArea}
+        className="bg-emerald-50 py-1 rounded-md my-2"
+        placeholder="Your password goes here"
           type="password"
           name="password"
           autoComplete="off"
@@ -94,13 +97,14 @@ export function Signup() {
             setPassword(e.target.value);
           }}
         />
-        <label className={styles.labelName} htmlFor="password">
-          <span className={styles.contentName}>Password</span>
+        <label htmlFor="password">
+          <span>Password</span>
         </label>
       </div>
-      <button className={styles.linkBtn} type="submit">
-        Signup
+      <button className= " bg-emerald-500 w-20 px-20 py-2 flex justify-center rounded-lg text-emerald-900 text-lg mt-5"type="submit">
+      Signup
       </button>
     </form>
+    </div>
   );
 }

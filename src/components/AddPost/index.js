@@ -35,8 +35,8 @@ export function AddPost({ getPosts }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="post">
-      <div className="post_content">
+    <form onSubmit={handleSubmit}>
+      <div>
         <input
           value={postTitle}
           onChange={event => setPostTitle(event.target.value)}

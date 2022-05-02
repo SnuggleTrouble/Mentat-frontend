@@ -34,7 +34,7 @@ export function Support({ support, id }) {
 
   return (
     <div>
-      <h1 className="counter">{counter.length}</h1>
+      <h1 Name="counclasster">{counter.length}</h1>
 
       <button className="supportCount" onClick={supportHandler}>
         Support
