@@ -3,11 +3,7 @@ import axios from "axios";
 import "./Comments.module.css";
 import { AuthContext } from "context";
 
-export function AddComment({
-  id,
-  individualPost,
-  setIndividualPost,
-}) {
+export function AddComment({ id, individualPost, setIndividualPost }) {
   const [commentContent, setCommentContent] = useState("");
   const { user } = useContext(AuthContext);
 
@@ -31,7 +27,7 @@ export function AddComment({
     const postCopy = JSON.parse(JSON.stringify(individualPost));
     postCopy.comments.push(comment.data);
     setIndividualPost(postCopy);
-    setCommentContent("")
+    setCommentContent("");
   };
 
   return (

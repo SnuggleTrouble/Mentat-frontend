@@ -55,7 +55,12 @@ export function Home() {
         <div>
           <h1>Home</h1>
           <AddPost getPosts={getPosts} setPosts={setPosts} />
-          <ListOfPosts posts={posts} setPosts={setPosts} getPosts={getPosts} getComments={getComments}/>
+          <ListOfPosts
+            posts={posts}
+            setPosts={setPosts}
+            getPosts={getPosts}
+            getComments={getComments}
+          />
         </div>
       ) : (
         navigate("/login")
