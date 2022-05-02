@@ -9,20 +9,23 @@ export function ListOfComments({
   return (
     <div>
       {comments &&
-        comments.slice(0).reverse().map(comment => {
-          // Pass the id, the content and the setComments function
-          return (
-            <Comment
-              key={comment._id}
-              fetchPost={fetchPost}
-              id={comment._id}
-              commentContent={comment.commentContent}
-              setComments={setComments}
-              comment={comment}
-              deleteComment={deleteComment}
-            />
-          );
-        })}
+        comments
+          .slice(0)
+          .reverse()
+          .map(comment => {
+            // Pass the id, the content and the setComments function
+            return (
+              <Comment
+                key={comment._id}
+                fetchPost={fetchPost}
+                id={comment._id}
+                commentContent={comment.commentContent}
+                setComments={setComments}
+                comment={comment}
+                deleteComment={deleteComment}
+              />
+            );
+          })}
     </div>
   );
 }

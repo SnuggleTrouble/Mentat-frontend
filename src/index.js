@@ -27,7 +27,6 @@ ReactDOM.render(
               element={
                 <PrivateRoute>
                   <Home />
-                  {/*  <PostPage path="/post/:id" /> */}
                 </PrivateRoute>
               }
             />

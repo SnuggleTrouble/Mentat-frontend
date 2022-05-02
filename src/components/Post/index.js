@@ -11,11 +11,11 @@ export function Post({
   content,
   category,
   support,
-  getComments, 
+  getComments,
   setPosts,
   post,
   getPosts,
-  createdAt, 
+  createdAt,
 }) {
   const [showAll, setShowAll] = useState(false);
   const [edit, setEdit] = useState(false);
@@ -90,9 +90,9 @@ export function Post({
 
   return (
     <>
-      <div >
-        <div >
-          <div >{`${post.user.userName}`}</div>
+      <div>
+        <div>
+          <div>{`${post.user.userName}`}</div>
 
           {edit ? (
             <input
@@ -145,12 +145,12 @@ export function Post({
           )}
 
           {edit ? (
-            <div >
+            <div>
               <button onClick={handleSave}>Save</button>
               <button onClick={handleCancel}>Cancel</button>
             </div>
           ) : (
-            <div >
+            <div>
               {content.length > 100 && (
                 <button onClick={handleShowAll}>
                   {showAll ? "Read less" : "Read more"}
