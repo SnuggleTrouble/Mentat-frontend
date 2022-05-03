@@ -1,6 +1,5 @@
 import { useState } from "react";
 import axios from "axios";
-import "./AddPost.module.css";
 
 // Add posts is for getting new posts when adding a new one
 export function AddPost({ getPosts }) {

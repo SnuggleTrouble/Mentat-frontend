@@ -1,6 +1,5 @@
 import { useContext, useState } from "react";
 import axios from "axios";
-import "./Comments.module.css";
 import { AuthContext } from "context";
 
 export function AddComment({ id, individualPost, setIndividualPost }) {

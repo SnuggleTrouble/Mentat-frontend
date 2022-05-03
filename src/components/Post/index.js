@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./Post.module.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Support } from "components/Support/Support";

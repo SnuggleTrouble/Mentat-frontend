@@ -2,7 +2,6 @@ import { useContext, useState, useEffect } from "react";
 import { AuthContext } from "context";
 import { useNavigate } from "react-router-dom";
 import { AddPost, ListOfPosts } from "components";
-import styles from "./Home.module.css";
 import axios from "axios";
 
 export function Home() {

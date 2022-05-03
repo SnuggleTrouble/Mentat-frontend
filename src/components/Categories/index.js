@@ -1,7 +1,5 @@
 import { useState } from "react";
-import { Post } from "../Post/index.js";
 import axios from "axios";
-import styles from "./Categories.module.css";
 import { ListOfPosts } from "components";
 
 const categories = [

@@ -1,5 +1,4 @@
 import { useState, useContext } from "react";
-import "./Comment.module.css";
 import axios from "axios";
 import { AuthContext } from "context";
 
