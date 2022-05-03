@@ -92,6 +92,7 @@ export function Post({
       <div className= " rounded-2xl border-2">
         <div className="p-10 bg-white rounded-2xl ">
           <div className="my-2 text-emerald-">{`${post.user.userName}`}</div>
+          {console.log(createdAt, "long sentence that we'll see somewhere")}
           <p>{createdAt}</p>
 
           {edit ? (
