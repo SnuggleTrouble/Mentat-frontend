@@ -19,7 +19,7 @@ export function Login() {
           </h2>
           <div className="flex gap-2 mr-2 mb-5">
             <input
-              className="bg-emerald-50 py-1 rounded-md"
+              className="bg-emerald-50 p-2 rounded-md"
               type="email"
               name="email"
               placeholder="Email goes here"
@@ -36,7 +36,7 @@ export function Login() {
           </div>
           <div className="flex gap-2 mr-2 mb-7 ">
             <input
-              className="bg-emerald-50 py-1 rounded-md"
+              className="bg-emerald-50 p-2 rounded-md"
               placeholder="Password goes here"
               type="password"
               name="password"

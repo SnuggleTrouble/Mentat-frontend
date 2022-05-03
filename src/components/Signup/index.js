@@ -25,7 +25,7 @@ export function Signup() {
             <span>First Name</span>
           </label>
           <input
-            className="bg-emerald-50 py-1 rounded-md my-2"
+            className="bg-emerald-50 p-2 rounded-md my-2"
             placeholder="Your first name goes here"
             type="firstname"
             name="firstname"
@@ -42,7 +42,7 @@ export function Signup() {
             <span>Last Name</span>
           </label>
           <input
-            className="bg-emerald-50 py-1 rounded-md my-2"
+            className="bg-emerald-50 p-2 rounded-md my-2"
             placeholder="Your last name goes here"
             type="lastname"
             name="lastname"
@@ -59,7 +59,7 @@ export function Signup() {
             <span>Username</span>
           </label>
           <input
-            className="bg-emerald-50 py-1 rounded-md my-2"
+            className="bg-emerald-50 p-2 rounded-md my-2"
             placeholder="Your username goes here"
             type="username"
             name="username"
@@ -76,7 +76,7 @@ export function Signup() {
             <span>Email</span>
           </label>
           <input
-            className="bg-emerald-50 py-1 rounded-md my-2"
+            className="bg-emerald-50 p-2 rounded-md my-2"
             placeholder="Your email goes here"
             type="email"
             name="email"
@@ -93,7 +93,7 @@ export function Signup() {
             <span>Password</span>
           </label>
           <input
-            className="bg-emerald-50 py-1 rounded-md my-2"
+            className="bg-emerald-50 p-2 rounded-md my-2"
             placeholder="Your password goes here"
             type="password"
             name="password"
@@ -106,7 +106,7 @@ export function Signup() {
           />
         </div>
         <button
-          className=" bg-emerald-500 w-20 px-20 py-2 flex justify-center rounded-lg text-emerald-900 text-lg mt-5"
+          className=" bg-emerald-500 w-20 px-20 p-2 flex justify-center rounded-lg text-emerald-900 text-lg mt-5"
           type="submit"
         >
           Signup

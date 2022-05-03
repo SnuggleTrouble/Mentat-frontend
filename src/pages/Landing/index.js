@@ -1,6 +1,7 @@
 import { Navbar } from "components";
 import { AuthContext } from "context";
 import { useContext } from "react";
+import love from "..//..//images/loveicon.png";
 
 export function Landing() {
   const { user } = useContext(AuthContext);
@@ -34,7 +35,7 @@ export function Landing() {
         <div className="p-10 border-2 rounded-xl border-gray-100 bg-gray-100 justify-center">
           <img
             className="mb-5"
-            src="https://cdn-icons.flaticon.com/png/512/3166/premium/3166003.png?token=exp=1651329546~hmac=518baa61cb6095d2dbe41a322e096c60"
+            src= {love}
             width={80}
             alt=""
           ></img>

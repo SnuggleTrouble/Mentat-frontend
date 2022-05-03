@@ -91,7 +91,11 @@ export function Post({
     <>
       <div className= " rounded-2xl border-2">
         <div className="p-10 bg-white rounded-2xl ">
-          <div className="my-2 text-emerald-">{`${post.user.userName}`}</div>
+        <div className="flex flex-row justify-between">
+        <div className="my-2 text-emerald-800">{`${post.user.userName}:`}</div>
+        <p className="p-2 w-40 flex justify-center rounded-xl bg-emerald-400 mb-10 text-emerald-900">{category}</p>
+        </div>
+
 
           {edit ? (
             <select 
@@ -116,7 +120,7 @@ export function Post({
               <option value="Suicidal Feelings">Suicidal Feelings</option>
             </select>
           ) : (
-            <p className="p-2 w-40 flex justify-center rounded-xl bg-emerald-50 mb-10">{category}</p>
+            <p></p>
           )}
 
 
@@ -159,9 +163,9 @@ export function Post({
                 </button>
               )}
               <Support support={support} id={id} />
-              <button className=" bg-emerald-400 rounded-lg  text-stone-700 text-2xl" onClick={handleShowComment}>💬</button>
-              <button className=" bg-gray-200 rounded-lg " onClick={handleEdit}>Edit</button>
-              <button className=" bg-gray-200 rounded-lg "  onClick={handleDelete}>Delete</button>
+              <button className=" bg-gray-100 rounded-lg  text-stone-700 text-2xl p-2" onClick={handleShowComment}></button>
+              <button className=" bg-gray-100 rounded-lg p-2 min-w-fit " onClick={handleEdit}>Edit</button>
+              <button className=" bg-gray-100 rounded-lg p-2"  onClick={handleDelete}>Delete</button>
             </div>
           )}
         </div>
