@@ -34,7 +34,7 @@ export function PostPage({ setComments, getComments }) {
     <div>
       {individualPost && (
         <div>
-          <p>{individualPost.user.userName}</p>
+          <p >{individualPost.user.userName}</p>
           <h3>{individualPost.title}</h3>
           <p>{individualPost.content}</p>
           <AddComment
