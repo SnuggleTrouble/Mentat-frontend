@@ -64,7 +64,7 @@ export function AuthContextProvider({ children }) {
 
   const verify = async () => {
     try {
-      const response = await client.get("/auth/verify");
+      const response = await client.post("/auth/verify");
       setUser(response.data.user);
       navigate("/");
     } catch (error) {
