@@ -91,17 +91,12 @@ export function Post({
     <>
       <div className= " rounded-2xl border-2">
         <div className="p-10 bg-white rounded-2xl ">
-<<<<<<< HEAD
         <div className="flex flex-row justify-between">
         <div className="my-2 text-emerald-800">{`${post.user.userName}:`}</div>
+        <p>{createdAt}</p>
         <p className="p-2 w-40 flex justify-center rounded-xl bg-emerald-400 mb-10 text-emerald-900">{category}</p>
         </div>
 
-=======
-          <div className="my-2 text-emerald-">{`${post.user.userName}`}</div>
-          {console.log(createdAt, "long sentence that we'll see somewhere")}
-          <p>{createdAt}</p>
->>>>>>> b6677c5045d9b997d35ebc8b36e592977b88b897
 
           {edit ? (
             <select 

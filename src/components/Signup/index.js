@@ -18,44 +18,6 @@ export function Signup() {
         <h2 className="mb-5 text-black font-bold text-2xl">
           Join an awesome community
         </h2>
-<<<<<<< HEAD
-        <div className="flex flex-col gap-2">
-          <label htmlFor="firstName">
-            <span>First Name</span>
-          </label>
-          <input
-            className="bg-emerald-50 p-2 rounded-md my-2"
-            placeholder="Your first name goes here"
-            type="firstname"
-            name="firstname"
-            autoComplete="off"
-            required
-            value={firstName}
-            onChange={e => {
-              setFirstName(e.target.value);
-            }}
-          />
-        </div>
-        <div className="flex flex-col">
-          <label htmlFor="lastName">
-            <span>Last Name</span>
-          </label>
-          <input
-            className="bg-emerald-50 p-2 rounded-md my-2"
-            placeholder="Your last name goes here"
-            type="lastname"
-            name="lastname"
-            autoComplete="off"
-            required
-            value={lastName}
-            onChange={e => {
-              setLastName(e.target.value);
-            }}
-          />
-        </div>
-=======
-
->>>>>>> b6677c5045d9b997d35ebc8b36e592977b88b897
         <div className="flex flex-col gap-2">
           <label htmlFor="userName">
             <span>Username</span>
