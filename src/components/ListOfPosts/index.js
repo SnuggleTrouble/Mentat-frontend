@@ -20,6 +20,7 @@ export function ListOfPosts({ posts, setPosts, getPosts }) {
               setPosts={setPosts}
               post={post}
               getPosts={getPosts}
+              createdAt={post.createdAt}
             />
           );
         })}

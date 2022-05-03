@@ -3,15 +3,13 @@ import { AuthContext } from "../../context";
 
 export function Signup() {
   const { signup } = useContext(AuthContext);
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = e => {
     e.preventDefault();
-    signup(firstName, lastName, userName, email, password);
+    signup(userName, email, password);
   };
 
   return (
@@ -20,6 +18,7 @@ export function Signup() {
         <h2 className="mb-5 text-black font-bold text-2xl">
           Join an awesome community
         </h2>
+<<<<<<< HEAD
         <div className="flex flex-col gap-2">
           <label htmlFor="firstName">
             <span>First Name</span>
@@ -54,6 +53,9 @@ export function Signup() {
             }}
           />
         </div>
+=======
+
+>>>>>>> b6677c5045d9b997d35ebc8b36e592977b88b897
         <div className="flex flex-col gap-2">
           <label htmlFor="userName">
             <span>Username</span>
