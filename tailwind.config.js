@@ -7,6 +7,10 @@ module.exports = {
     "./src/pages/Landing/index.js",
     "./src/components/Login/index.js",
     "./src/pages/LoginPage/index.js",
+    "./src/components/Post/index.js",
+    "./src/components/ListOfPosts/index.js",
+    "./src/pages/PostPage/index.js",
+    "./src/components/AddPost/index.js"
   ],
   presets: [],
   darkMode: "media", // or 'class'

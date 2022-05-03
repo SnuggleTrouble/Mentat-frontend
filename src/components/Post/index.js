@@ -89,36 +89,12 @@ export function Post({
 
   return (
     <>
-      <div>
-        <div>
-          <div>{`${post.user.userName}`}</div>
+      <div className= " rounded-2xl border-2">
+        <div className="p-10 bg-white rounded-2xl ">
+          <div className="my-2 text-emerald-">{`${post.user.userName}`}</div>
 
           {edit ? (
-            <input
-              value={newPostTitle}
-              onChange={event => setNewPostTitle(event.target.value)}
-            />
-          ) : (
-            <p>{title}</p>
-          )}
-
-          {edit ? (
-            <textarea
-              value={newPostContent}
-              onChange={event => setNewPostContent(event.target.value)}
-            />
-          ) : showAll ? (
-            <p>{content}</p>
-          ) : (
-            <p>
-              {content.length > 100
-                ? `${content.substring(0, 100)}...`
-                : content}
-            </p>
-          )}
-
-          {edit ? (
-            <select
+            <select 
               value={newPostCategory}
               onChange={event => setNewPostCategory(event.target.value)}
             >
@@ -140,7 +116,32 @@ export function Post({
               <option value="Suicidal Feelings">Suicidal Feelings</option>
             </select>
           ) : (
-            <p>{category}</p>
+            <p className="p-2 w-40 flex justify-center rounded-xl bg-emerald-50 mb-10">{category}</p>
+          )}
+
+
+          {edit ? (
+            <input className=" p-2 border-2 rounded-lg "
+              value={newPostTitle}
+              onChange={event => setNewPostTitle(event.target.value)}
+            />
+          ) : (
+            <p className="font-bold my-2">{title}</p>
+          )}
+
+          {edit ? (
+            <textarea 
+              value={newPostContent}
+              onChange={event => setNewPostContent(event.target.value)}
+            />
+          ) : showAll ? (
+            <p>{content}</p>
+          ) : (
+            <p className="my-2">
+              {content.length > 100
+                ? `${content.substring(0, 100)}...`
+                : content}
+            </p>
           )}
 
           {edit ? (
@@ -148,21 +149,23 @@ export function Post({
               <button onClick={handleSave}>Save</button>
               <button onClick={handleCancel}>Cancel</button>
             </div>
+            
           ) : (
-            <div>
+            
+            <div className=" flex flex-wrap justify-items-start gap-10">
               {content.length > 100 && (
-                <button onClick={handleShowAll}>
+                <button className="text-stone-600 font-semibold pt-5 underline underline-offset-1	o" onClick={handleShowAll}>
                   {showAll ? "Read less" : "Read more"}
                 </button>
               )}
-              <button onClick={handleShowComment}>Comment</button>
-              <button onClick={handleEdit}>Edit</button>
-              <button onClick={handleDelete}>Delete</button>
+              <Support support={support} id={id} />
+              <button className=" bg-emerald-400 rounded-lg  text-stone-700 text-2xl" onClick={handleShowComment}>💬</button>
+              <button className=" bg-gray-200 rounded-lg " onClick={handleEdit}>Edit</button>
+              <button className=" bg-gray-200 rounded-lg "  onClick={handleDelete}>Delete</button>
             </div>
           )}
         </div>
       </div>
-      <Support support={support} id={id} />
     </>
   );
 }

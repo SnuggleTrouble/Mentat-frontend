@@ -33,11 +33,11 @@ export function Support({ support, id }) {
   };
 
   return (
-    <div>
-      <h1 className="counter">{counter.length}</h1>
+    <div className="p-2 flex flex-row bg-gray-100 rounded-xl justify-center gap-10 text-2xl">
+      <h1 className="font-bold mt-1 ">{counter.length}</h1>
 
-      <button className="supportCount" onClick={supportHandler}>
-        Support
+      <button className=" rounded-lg text-2xl " onClick={supportHandler}>
+        ❤️
       </button>
     </div>
   );

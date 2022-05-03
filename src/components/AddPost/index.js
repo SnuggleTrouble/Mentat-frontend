@@ -34,17 +34,20 @@ export function AddPost({ getPosts }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <input
+    <form className=" p-20 " onSubmit={handleSubmit}>
+      <div className=" border-2 border-emerald-300 p-20 bg-white rounded-xl flex flex-col justify-start">
+        <h1 className="mb-5 text-stone-600 font-bold text-xl">Home</h1>
+        <input className="border-2 p-2 rounded-lg mb-5"
+          placeholder="Post title"
           value={postTitle}
           onChange={event => setPostTitle(event.target.value)}
         />
-        <textarea
+        <textarea className="border-2 p-2 rounded-lg mb-5"
+          placeholder="What's on your mind?"
           value={postContent}
           onChange={event => setPostContent(event.target.value)}
         />
-        <select
+        <select className="border-2 p-2 rounded-lg mb-5 text-stone-500"
           value={postCategory}
           onChange={event => setPostCategory(event.target.value)}
         >
@@ -65,7 +68,7 @@ export function AddPost({ getPosts }) {
           <option value="Stress">Stress</option>
           <option value="Suicidal Feelings">Suicidal Feelings</option>
         </select>
-        <button type="submit">Create Post</button>
+        <button className="p-2 rounded-xl bg-emerald-400 w-60 text-white font-bold" type="submit">Create Post</button>
       </div>
     </form>
   );
