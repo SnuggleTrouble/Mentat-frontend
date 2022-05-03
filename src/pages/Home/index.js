@@ -52,7 +52,6 @@ export function Home() {
     <div>
       {user ? (
         <div>
-          <h1>Home</h1>
           <AddPost getPosts={getPosts} setPosts={setPosts} />
           <ListOfPosts
             posts={posts}
