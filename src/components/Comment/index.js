@@ -123,7 +123,8 @@ export function Comment({
                   {showAll ? "Read less" : "Read more"}
                 </button>
               )}
-              {user._id === comment.user._id && (
+
+              {user.userName === comment.user && (
                 <div
                   id="line-preserver"
                   className=" flex flex-wrap justify-items-start gap-10"

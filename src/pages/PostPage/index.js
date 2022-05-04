@@ -3,7 +3,7 @@ import { AddComment, ListOfComments } from "components";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-export function PostPage({ setComments, getComments, createdAt }) {
+export function PostPage({ setComments, getComments }) {
   const [individualPost, setIndividualPost] = useState();
   const { id } = useParams();
   const fetchPost = async () => {
