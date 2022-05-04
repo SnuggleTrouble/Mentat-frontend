@@ -2,6 +2,8 @@ import { Navbar } from "components";
 import { AuthContext } from "context";
 import { useContext } from "react";
 import love from "..//..//images/loveicon.png";
+import shield from "..//..//images/shieldicon.png";
+import united from "..//..//images/united.png";
 
 export function Landing() {
   const { user } = useContext(AuthContext);
@@ -35,7 +37,7 @@ export function Landing() {
         <div className="p-10 border-2 rounded-xl border-gray-100 bg-gray-100 justify-center">
           <img
             className="mb-5"
-            src= {love}
+            src= {united}
             width={80}
             alt=""
           ></img>
@@ -51,7 +53,7 @@ export function Landing() {
         <div className="p-10 border-2 rounded-xl border-gray-100 bg-gray-100 justify-center">
           <img
             className="mb-5"
-            src="https://cdn-icons-png.flaticon.com/512/1161/1161439.png"
+            src={shield}
             width={80}
             alt=""
           ></img>
@@ -67,7 +69,7 @@ export function Landing() {
         <div className="flex justify-center flex-col p-10 border-2 rounded-xl border-gray-100 bg-gray-100 justify-center ">
           <img
             className="mb-5"
-            src="https://cdn-icons.flaticon.com/png/512/3364/premium/3364924.png?token=exp=1651329208~hmac=5daeb34872ba99c3a017be43494e21d2"
+            src= {love}
             width={80}
             alt=""
           ></img>

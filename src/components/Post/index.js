@@ -2,6 +2,10 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Support } from "components/Support/Support";
+import comment from "..//..///images/comment.png";
+import editing from "..//..//images/editing.png";
+import garbage from "..//..//images//garbage.png";
+
 
 // Receive the id, the content and the setPost function.
 export function Post({
@@ -96,10 +100,9 @@ export function Post({
         <p>{createdAt}</p>
         <p className="p-2 w-40 flex justify-center rounded-xl bg-emerald-400 mb-10 text-emerald-900">{category}</p>
         </div>
-
-
-          {edit ? (
-            <select 
+        <div className="flex flex-col gap-5">
+        {edit ? (
+            <select className=" p-2 border-2 rounded-lg "
               value={newPostCategory}
               onChange={event => setNewPostCategory(event.target.value)}
             >
@@ -131,16 +134,16 @@ export function Post({
               onChange={event => setNewPostTitle(event.target.value)}
             />
           ) : (
-            <p className="font-bold my-2">{title}</p>
+            <p className="font-bold ">{title}</p>
           )}
 
           {edit ? (
-            <textarea 
+            <textarea className="p-2 border-2 rounded-lg"
               value={newPostContent}
               onChange={event => setNewPostContent(event.target.value)}
             />
           ) : showAll ? (
-            <p>{content}</p>
+            <p className="">{content}</p>
           ) : (
             <p className="my-2">
               {content.length > 100
@@ -150,25 +153,26 @@ export function Post({
           )}
 
           {edit ? (
-            <div>
-              <button onClick={handleSave}>Save</button>
-              <button onClick={handleCancel}>Cancel</button>
+            <div className="flex gap-5">
+              <button className=" bg-gray-100 rounded-lg py-2 px-5"onClick={handleSave}>Save</button>
+              <button className=" bg-gray-100 rounded-lg py-2 px-5"onClick={handleCancel}>Cancel</button>
             </div>
             
           ) : (
             
             <div className=" flex flex-wrap justify-items-start gap-10">
               {content.length > 100 && (
-                <button className="text-stone-600 font-semibold pt-5 underline underline-offset-1	o" onClick={handleShowAll}>
+                <button className="text-stone-600 font-semibold pt-5 underline underline-offset-1" onClick={handleShowAll}>
                   {showAll ? "Read less" : "Read more"}
                 </button>
               )}
               <Support support={support} id={id} />
-              <button className=" bg-gray-100 rounded-lg  text-stone-700 text-2xl p-2" onClick={handleShowComment}></button>
-              <button className=" bg-gray-100 rounded-lg p-2 min-w-fit " onClick={handleEdit}>Edit</button>
-              <button className=" bg-gray-100 rounded-lg p-2"  onClick={handleDelete}>Delete</button>
+              <button className=" bg-gray-100 rounded-lg  text-stone-700 text-2xl px-5" onClick={handleShowComment}> <img src={comment} width="25px"></img></button>
+              <button className=" bg-gray-100 rounded-lg  px-5 min-w-fit " onClick={handleEdit}><img src={editing} width="22px"></img></button>
+              <button className=" bg-gray-100 rounded-lg px-5"  onClick={handleDelete}><img src={garbage} width="22px"></img></button>
             </div>
           )}
+        </div>
         </div>
       </div>
     </>
