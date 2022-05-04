@@ -1,4 +1,3 @@
-import { Navbar } from "components";
 import { AuthContext } from "context";
 import { useContext } from "react";
 import love from "..//..//images/loveicon.png";
@@ -12,11 +11,11 @@ export function Landing() {
       <div className="p-20 flex flex-row justify-between gap-20 my-10">
         <div className="">
           <h1 className="text-5xl mb-10 font-bold text-emerald-900">
-            A safe place to share your thoughts and emotions
+            A safe place to share your thoughts and emotions.
           </h1>
           <h2 className="text-2xl mb-10 text-stone-700">
             We are a pseudonymous forum where people openly talk about mental
-            health and find support, without being judge or discriminated.
+            health and find support, without being judged or discriminated.
           </h2>
           <button className="px-5 py-3 bg-emerald-400 rounded-lg text-emerald-900 font-bold">
             Start Sharing
@@ -35,14 +34,9 @@ export function Landing() {
       {/*section#2*/}
       <div className="bg-white p-20 flex my-10 flex-row justify-between gap-10 text-stone-700">
         <div className="p-10 border-2 rounded-xl border-gray-100 bg-gray-100 justify-center">
-          <img
-            className="mb-5"
-            src= {united}
-            width={80}
-            alt=""
-          ></img>
+          <img className="mb-5" src={united} width={80} alt=""></img>
           <h1 className="font-bold text-emerald-500 text-xl mb-5">
-            The support you need
+            The Support You Need
           </h1>
           <p>
             {" "}
@@ -51,14 +45,9 @@ export function Landing() {
           </p>
         </div>
         <div className="p-10 border-2 rounded-xl border-gray-100 bg-gray-100 justify-center">
-          <img
-            className="mb-5"
-            src={shield}
-            width={80}
-            alt=""
-          ></img>
+          <img className="mb-5" src={shield} width={80} alt=""></img>
           <h1 className="font-bold text-emerald-500 text-xl mb-5">
-            No sensitive data collected{" "}
+            No Sensitive Data Collected{" "}
           </h1>
           <p>
             {" "}
@@ -67,14 +56,9 @@ export function Landing() {
           </p>
         </div>
         <div className="flex justify-center flex-col p-10 border-2 rounded-xl border-gray-100 bg-gray-100 justify-center ">
-          <img
-            className="mb-5"
-            src= {love}
-            width={80}
-            alt=""
-          ></img>
+          <img className="mb-5" src={love} width={80} alt=""></img>
           <h1 className="font-bold text-emerald-500 text-xl mb-5">
-            Moderated by the community
+            Moderated By The Community
           </h1>
           <p>
             {" "}
