@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { AuthContext } from "context";
 import axios from "axios";
+import like from "..//..//images/like.png"
 
 export function Support({ support, id }) {
   // Acquire the authorization context to get the user
@@ -33,11 +34,11 @@ export function Support({ support, id }) {
   };
 
   return (
-    <div className="p-2 flex flex-row bg-gray-100 rounded-xl justify-center gap-10 text-2xl">
+    <div className="p-2 flex flex-row bg-gray-100 rounded-xl justify-center gap-2 text-2xl">
       <h1 className="font-bold ">{counter.length}</h1>
 
       <button className=" rounded-lg text-2xl " onClick={supportHandler}>
-        ❤️
+        <img className="" src={like} width="20px"></img>
       </button>
     </div>
   );
