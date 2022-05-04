@@ -105,6 +105,7 @@ export function Post({
               </p>
             </div>
           </div>
+
           <div className="flex flex-col gap-5">
             {edit ? (
               <select
@@ -195,9 +196,7 @@ export function Post({
                   <img src={comment} width="25px" alt=""></img>
                 </button>
                 {user._id === post.user._id && (
-                  <div
-                    className=" flex flex-wrap justify-items-start gap-10"
-                  >
+                  <div className=" flex flex-wrap justify-items-start gap-10">
                     <button
                       className=" bg-gray-100 rounded-lg  px-5 min-w-fit "
                       onClick={handleEdit}
