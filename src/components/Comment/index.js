@@ -13,6 +13,7 @@ export function Comment({
   comment,
   deleteComment,
   updateComment,
+  createdAt,
 }) {
   const [showAll, setShowAll] = useState(false);
   const [edit, setEdit] = useState(false);
@@ -82,6 +83,7 @@ export function Comment({
       <div>
         <div>
           <div>{`${comment.user}`}</div>
+          <p>{createdAt.split("T")[0]}</p>
 
           {edit ? (
             <textarea

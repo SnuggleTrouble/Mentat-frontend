@@ -23,6 +23,7 @@ export function ListOfComments({
                 setComments={setComments}
                 comment={comment}
                 deleteComment={deleteComment}
+                createdAt={comment.createdAt}
               />
             );
           })}
