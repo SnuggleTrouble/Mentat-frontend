@@ -34,10 +34,10 @@ export function Support({ support, id }) {
   };
 
   return (
-    <div className="p-2 flex flex-row bg-gray-100 rounded-xl justify-center gap-2 text-2xl">
-      <h1 className="font-bold ">{counter.length}</h1>
+    <div className="py-2 px-5 flex flex-row bg-gray-100 rounded-xl justify-center gap-2 ">
+      <h1 className=" ">{counter.length}</h1>
 
-      <button className=" rounded-lg text-2xl " onClick={supportHandler}>
+      <button className=" rounded-lg " onClick={supportHandler}>
         <img className="" src={like} width="20px"></img>
       </button>
     </div>
