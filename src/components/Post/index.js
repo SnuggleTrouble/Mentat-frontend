@@ -96,14 +96,13 @@ export function Post({
     <>
       <div className=" rounded-2xl border-2">
         <div className="p-10 bg-white rounded-2xl ">
-
-          <div className="flex flex-row justify-between">
-            <div className="my-2 text-emerald-800">{`${post.user.userName}`}</div>
+        <div className="flex flex-col">
+        <div className="flex justify-between">
+        <div className="my-2 text-emerald-800">{`${post.user.userName}`}</div>
             <p>{createdAt.split("T")[0]}</p>
-            <p className="p-2 w-40 flex justify-center rounded-xl bg-emerald-400 mb-10 text-emerald-900">
-              {category}
-            </p>
-          </div>
+            <p className="p-2 w-40 flex justify-center rounded-xl bg-emerald-400 mb-10 text-emerald-900">{category}</p>
+        </div>
+        </div>
           <div className="flex flex-col gap-5">
             {edit ? (
               <select

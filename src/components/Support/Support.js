@@ -38,7 +38,7 @@ export function Support({ support, id }) {
       <h1 className=" ">{counter.length}</h1>
 
       <button className=" rounded-lg " onClick={supportHandler}>
-        <img className="" src={like} width="20px"></img>
+        <img className="" src={like} width="20px" alt=""></img>
       </button>
     </div>
   );
