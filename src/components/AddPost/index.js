@@ -42,7 +42,7 @@ export function AddPost({ getPosts }) {
           value={postTitle}
           onChange={event => setPostTitle(event.target.value)}
         />
-        <textarea className="border-2 p-2 rounded-lg mb-5"
+        <textarea className="border-2 p-2 rounded-lg mb-5 white-space: pre-wrap"
           placeholder="What's on your mind?"
           value={postContent}
           onChange={event => setPostContent(event.target.value)}
