@@ -35,9 +35,9 @@ form {
 }
 
 textarea {
-  white-space: pre-wrap;
+  white-space: pre-line;
 }
 
-#line-preserver p {
-  white-space: pre-wrap;
+p {
+  white-space: pre-line;
 }
