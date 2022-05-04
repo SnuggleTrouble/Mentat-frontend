@@ -80,75 +80,81 @@ export function Comment({
 
   return (
     <>
-      <div>
-        <div>
-          <div>{`${comment.user}`}</div>
-          <p>{createdAt.split("T")[0]}</p>
-
-          {edit ? (
-            <textarea
-              value={newCommentContent}
-              onChange={event => setNewCommentContent(event.target.value)}
-            />
-          ) : showAll ? (
-            <p>{commentContent}</p>
-          ) : (
-            <p>
-              {commentContent.length > 300
-                ? `${commentContent.substring(0, 300)}...`
-                : commentContent}
-            </p>
-          )}
-
-          {edit ? (
-            <div className="flex gap-5">
-              <button
-                className=" bg-gray-100 rounded-lg py-2 px-5"
-                onClick={handleSave}
-              >
-                Save
-              </button>
-              <button
-                className=" bg-gray-100 rounded-lg py-2 px-5"
-                onClick={handleCancel}
-              >
-                Cancel
-              </button>
+      <div className=" rounded-2xl border-2">
+        <div className="p-10 bg-white rounded-2xl ">
+          <div className="flex flex-col">
+            <div className="flex justify-between">
+              <div className="my-2 text-emerald-800">{`${comment.user}`}</div>
+              <p>{createdAt.split("T")[0]}</p>
             </div>
-          ) : (
-            <div className=" flex flex-wrap justify-items-start gap-10">
-              {commentContent.length > 300 && (
+          </div>
+          <div className="flex flex-col gap-5">
+            {edit ? (
+              <textarea
+                className="p-2 border-2 rounded-lg"
+                value={newCommentContent}
+                onChange={event => setNewCommentContent(event.target.value)}
+              />
+            ) : showAll ? (
+              <p className="">{commentContent}</p>
+            ) : (
+              <p className="my-2">
+                {commentContent.length > 300
+                  ? `${commentContent.substring(0, 300)}...`
+                  : commentContent}
+              </p>
+            )}
+
+            {edit ? (
+              <div className="flex gap-5">
                 <button
-                  className="text-stone-600 font-semibold pt-5 underline underline-offset-1"
-                  onClick={handleShowAll}
+                  className=" bg-gray-100 rounded-lg py-2 px-5"
+                  onClick={handleSave}
                 >
-                  {showAll ? "Read less" : "Read more"}
+                  Save
                 </button>
-              )}
-
-              {user.userName === comment.user && (
-                <div
-                  id="line-preserver"
-                  className=" flex flex-wrap justify-items-start gap-10"
+                <button
+                  className=" bg-gray-100 rounded-lg py-2 px-5"
+                  onClick={handleCancel}
                 >
+                  Cancel
+                </button>
+              </div>
+            ) : (
+              <div className=" flex flex-wrap justify-items-start gap-10">
+                {commentContent.length > 300 && (
                   <button
-                    className=" bg-gray-100 rounded-lg  px-5 min-w-fit "
-                    onClick={handleEdit}
+                    className="text-stone-600 font-semibold pt-5 underline underline-offset-1"
+                    onClick={handleShowAll}
                   >
-                    <img src={editing} width="22px" alt=""></img>
+                    {showAll ? "Read less" : "Read more"}
                   </button>
-                  <button
-                    className=" bg-gray-100 rounded-lg px-5"
-                    onClick={() => {
-                      handleDelete(comment._id);
-                    }}
+                )}
+
+                {user.userName === comment.user && (
+                  <div
+                    id="line-preserver"
+                    className=" flex flex-wrap justify-items-start gap-10"
                   >
-                    <img src={garbage} width="22px" alt=""></img>
-                  </button>
-                </div>
-              )}
-            </div>
-          )}
+                    <button
+                      className=" bg-gray-100 rounded-lg  px-5 min-w-fit "
+                      onClick={handleEdit}
+                    >
+                      <img src={editing} width="22px" alt=""></img>
+                    </button>
+                    <button
+                      className=" bg-gray-100 rounded-lg px-5"
+                      onClick={() => {
+                        handleDelete(comment._id);
+                      }}
+                    >
+                      <img src={garbage} width="22px" alt=""></img>
+                    </button>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </>

@@ -196,7 +196,6 @@ export function Post({
                 </button>
                 {user._id === post.user._id && (
                   <div
-                    id="line-preserver"
                     className=" flex flex-wrap justify-items-start gap-10"
                   >
                     <button
