@@ -33,3 +33,11 @@ form {
   padding: 40px;
   gap: 20px;
 }
+
+textarea {
+  white-space: pre-wrap;
+}
+
+#line-preserver p {
+  white-space: pre-wrap;
+}

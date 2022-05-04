@@ -1,6 +1,8 @@
 import { useState, useContext } from "react";
 import axios from "axios";
 import { AuthContext } from "context";
+import editing from "..//..//images/editing.png";
+import garbage from "..//..//images//garbage.png";
 
 // Receive the id, the content and the setComment function
 export function Comment({
@@ -15,6 +17,7 @@ export function Comment({
   const [showAll, setShowAll] = useState(false);
   const [edit, setEdit] = useState(false);
   const [newCommentContent, setNewCommentContent] = useState(commentContent);
+  const { user } = useContext(AuthContext);
 
   // handle Comment deletion
   const handleDelete = commentId => {
@@ -89,32 +92,58 @@ export function Comment({
             <p>{commentContent}</p>
           ) : (
             <p>
-              {commentContent.length > 100
-                ? `${commentContent.substring(0, 100)}...`
+              {commentContent.length > 300
+                ? `${commentContent.substring(0, 300)}...`
                 : commentContent}
             </p>
           )}
 
           {edit ? (
-            <div>
-              <button onClick={handleSave}>Save</button>
-              <button onClick={handleCancel}>Cancel</button>
+            <div className="flex gap-5">
+              <button
+                className=" bg-gray-100 rounded-lg py-2 px-5"
+                onClick={handleSave}
+              >
+                Save
+              </button>
+              <button
+                className=" bg-gray-100 rounded-lg py-2 px-5"
+                onClick={handleCancel}
+              >
+                Cancel
+              </button>
             </div>
           ) : (
-            <div>
-              {commentContent.length > 100 && (
-                <button onClick={handleShowAll}>
+            <div className=" flex flex-wrap justify-items-start gap-10">
+              {commentContent.length > 300 && (
+                <button
+                  className="text-stone-600 font-semibold pt-5 underline underline-offset-1"
+                  onClick={handleShowAll}
+                >
                   {showAll ? "Read less" : "Read more"}
                 </button>
               )}
-              <button onClick={handleEdit}>Edit</button>
-              <button
-                onClick={() => {
-                  handleDelete(comment._id);
-                }}
-              >
-                Delete
-              </button>
+              {user._id === comment.user._id && (
+                <div
+                  id="line-preserver"
+                  className=" flex flex-wrap justify-items-start gap-10"
+                >
+                  <button
+                    className=" bg-gray-100 rounded-lg  px-5 min-w-fit "
+                    onClick={handleEdit}
+                  >
+                    <img src={editing} width="22px" alt=""></img>
+                  </button>
+                  <button
+                    className=" bg-gray-100 rounded-lg px-5"
+                    onClick={() => {
+                      handleDelete(comment._id);
+                    }}
+                  >
+                    <img src={garbage} width="22px" alt=""></img>
+                  </button>
+                </div>
+              )}
             </div>
           )}
         </div>

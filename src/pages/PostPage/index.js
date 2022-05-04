@@ -3,7 +3,7 @@ import { AddComment, ListOfComments } from "components";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-export function PostPage({ setComments, getComments }) {
+export function PostPage({ setComments, getComments, createdAt }) {
   const [individualPost, setIndividualPost] = useState();
   const { id } = useParams();
   const fetchPost = async () => {
@@ -34,7 +34,7 @@ export function PostPage({ setComments, getComments }) {
     <div>
       {individualPost && (
         <div>
-          <p >{individualPost.user.userName}</p>
+          <p>{`Author: ${individualPost.user.userName}`}</p>
           <h3>{individualPost.title}</h3>
           <p>{individualPost.content}</p>
           <AddComment
