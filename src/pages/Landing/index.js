@@ -1,5 +1,6 @@
 import { AuthContext } from "context";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import love from "..//..//images/loveicon.png";
 import shield from "..//..//images/shieldicon.png";
 import united from "..//..//images/united.png";
@@ -18,9 +19,10 @@ export function Landing() {
             health and find support, without being judged or discriminated.
           </h2>
           <button className="px-5 py-3 bg-emerald-400 rounded-lg text-emerald-900 font-bold">
-            Start Sharing
+            {!user && <Link to="/login">Start Sharing</Link>}
           </button>
         </div>
+
         <div>
           <img
             className="rounded-xl"
