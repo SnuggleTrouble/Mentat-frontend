@@ -96,6 +96,7 @@ export function Post({
     <>
       <div className=" rounded-2xl border-2">
         <div className="p-10 bg-white rounded-2xl ">
+
           <div className="flex flex-row justify-between">
             <div className="my-2 text-emerald-800">{`${post.user.userName}`}</div>
             <p>{createdAt.split("T")[0]}</p>

@@ -34,11 +34,11 @@ export function CategoryFilter(category, post) {
   };
 
   return (
-    <div>
+    <div className="flex">
       <ul>
         {categories.map(category => {
           return (
-            <li>
+            <li className="flex flex-row">
               <button onClick={() => fetchPosts(category.category)}>
                 {category.category}
               </button>
