@@ -41,7 +41,7 @@ export function CategoryFilter(category, post) {
         {categories.map(category => {
           return (
             <li className="">
-              <button className="flex flex-row rounded-xl bg-gray-50 text-stone-600 p-3"onClick={() => fetchPosts(category.category)}>
+              <button className="flex flex-row rounded-xl bg-gray-50 text-stone-600 p-3" onClick={() => fetchPosts(category.category)}>
                 {category.category}
               </button>
             </li>

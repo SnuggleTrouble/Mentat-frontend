@@ -10,6 +10,7 @@ export function Navbar() {
         <div className=" text-emerald-600 ">
           <img src="./Mentat-logo.png" width={115} alt=""/>
         </div>
+        <div>{user && <Link to="/">Main Feed</Link>}</div>
         <div>{user && <Link to="/post/categories">Categories</Link>}</div>
         <div>{!user && <Link to="/landing">Home</Link>}</div>
         <div>
