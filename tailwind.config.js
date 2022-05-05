@@ -11,7 +11,8 @@ module.exports = {
     "./src/components/ListOfPosts/index.js",
     "./src/pages/PostPage/index.js",
     "./src/components/AddPost/index.js",
-    "./src/components/Categories/index.js"
+    "./src/components/Categories/index.js",
+    "./src/pages/PostPage/index.js",
   ],
   presets: [],
   darkMode: "media", // or 'class'
