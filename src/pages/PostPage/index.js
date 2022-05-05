@@ -36,6 +36,7 @@ export function PostPage({ setComments, getComments }) {
         <div className="bg-white p-10 rounded-xl flex flex-col gap-2">
         <div>
           <p className="text-emerald-800 mb-20">{`Author: ${individualPost.user.userName}`}</p>
+          <p>{individualPost.category}</p>
           <h3 className="font-bold mb-4">{individualPost.title}</h3>
           <p style={{"white-space": "pre-line"}}>{individualPost.content}</p>
           </div>
@@ -56,7 +57,6 @@ export function PostPage({ setComments, getComments }) {
             fetchPost={fetchPost}
             deleteComment={deleteComment}
           />
-
           </div>
         </div>
       )}

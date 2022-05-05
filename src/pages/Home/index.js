@@ -52,7 +52,7 @@ export function Home() {
     <div>
       {user ? (
         <div>
-          <AddPost getPosts={getPosts} setPosts={setPosts} />
+          <AddPost getPosts={getPosts} setPosts={setPosts}/>
           <ListOfPosts
             posts={posts}
             setPosts={setPosts}
