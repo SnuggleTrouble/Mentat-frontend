@@ -13,6 +13,7 @@ module.exports = {
     "./src/components/AddPost/index.js",
     "./src/components/Categories/index.js",
     "./src/pages/PostPage/index.js",
+    "./src/components/AddComment/index.js"
   ],
   presets: [],
   darkMode: "media", // or 'class'
