@@ -19,7 +19,7 @@ export function Landing() {
             health and find support, without being judged or discriminated.
           </h2>
           <button className="px-5 py-3 bg-emerald-400 rounded-lg text-emerald-900 font-bold">
-            {!user && <Link to="/login">Start Sharing</Link>}
+            {!user && <Link to="/signup">Start Sharing</Link>}
           </button>
         </div>
 
