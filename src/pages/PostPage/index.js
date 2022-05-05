@@ -31,12 +31,19 @@ export function PostPage({ setComments, getComments }) {
     id && fetchPost();
   }, [id]);
   return (
-    <div>
+    <div className="p-20 flex flex-col gap-5">
       {individualPost && (
+        <div className="bg-white p-10 rounded-xl flex flex-col gap-2 border-2">
         <div>
-          <p>{`Author: ${individualPost.user.userName}`}</p>
-          <h3>{individualPost.title}</h3>
-          <p style={{"white-space": "pre-line"}}>{individualPost.content}</p>
+          <p className="text-emerald-800 mb-20">{`Author: ${individualPost.user.userName}`}</p>
+          <h3 className="font-bold mb-4">{individualPost.title}</h3>
+          <p className="mb-4" style={{"white-space": "pre-line"}}>{individualPost.content}</p>
+          </div>
+        </div>
+      )}
+      <div>
+      </div>
+      <div className="p-20 rounded-xl flex flex-col bg-white border-2">
           <AddComment
             id={id}
             individualPost={individualPost}
@@ -45,14 +52,16 @@ export function PostPage({ setComments, getComments }) {
             setComments={setComments}
             updateComment={updateComment}
           />
+          </div>
+          <div className="">
           <ListOfComments
             comments={individualPost.comments}
             setComments={setComments}
             fetchPost={fetchPost}
             deleteComment={deleteComment}
           />
-        </div>
-      )}
+          </div>
     </div>
+    
   );
 }
