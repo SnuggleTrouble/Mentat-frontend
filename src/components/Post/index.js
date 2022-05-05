@@ -153,9 +153,9 @@ export function Post({
                 onChange={event => setNewPostContent(event.target.value)}
               />
             ) : showAll ? (
-              <p className="">{content}</p>
+              <p style={{"white-space": "pre-line"}} className="">{content}</p>
             ) : (
-              <p className="my-2">
+              <p style={{"white-space": "pre-line"}} className="my-2">
                 {content.length > 500
                   ? `${content.substring(0, 500)}...`
                   : content}

@@ -96,9 +96,9 @@ export function Comment({
                 onChange={event => setNewCommentContent(event.target.value)}
               />
             ) : showAll ? (
-              <p className="">{commentContent}</p>
+              <p style={{"white-space": "pre-line"}} className="">{commentContent}</p>
             ) : (
-              <p className="my-2">
+              <p style={{"white-space": "pre-line"}} className="my-2">
                 {commentContent.length > 300
                   ? `${commentContent.substring(0, 300)}...`
                   : commentContent}

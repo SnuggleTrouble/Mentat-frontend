@@ -36,7 +36,7 @@ export function PostPage({ setComments, getComments }) {
         <div>
           <p>{`Author: ${individualPost.user.userName}`}</p>
           <h3>{individualPost.title}</h3>
-          <p>{individualPost.content}</p>
+          <p style={{"white-space": "pre-line"}}>{individualPost.content}</p>
           <AddComment
             id={id}
             individualPost={individualPost}
