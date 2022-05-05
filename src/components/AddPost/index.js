@@ -36,14 +36,13 @@ export function AddPost({ getPosts }) {
   return (
     <form className=" p-20 " onSubmit={handleSubmit}>
       <h1 className="text-2xl">What is mental health?</h1>
-      <p>
+      <p className="mb-2">
         Mental health includes our emotional, psychological, and social
         well-being. It affects how we think, feel, and act. It also helps
         determine how we handle stress, relate to others, and make healthy
         choices. Mental health is important at every stage of life, from
         childhood and adolescence through adulthood.
       </p>
-      <br />
       <p className="mb-5">
         Although the terms are often used interchangeably, poor mental health
         and mental illness are not the same. A person can experience poor mental
@@ -51,7 +50,7 @@ export function AddPost({ getPosts }) {
         diagnosed with a mental illness can experience periods of physical,
         mental, and social well-being.
       </p>
-      <h1 className="mb-5 text-2xl">
+      <h1 className=" text-2xl">
         Why is mental health important for overall health?
       </h1>
       <p className="mb-5">
@@ -61,7 +60,7 @@ export function AddPost({ getPosts }) {
         diabetes, heart disease, and stroke. Similarly, the presence of chronic
         conditions can increase the risk for mental illness
       </p>
-      <h1 className="mb-5 text-2xl">Can your mental health change over time?</h1>
+      <h1 className=" text-2xl">Can your mental health change over time?</h1>
       <p className="mb-5">
         Yes, it's important to remember that a person's mental health can change
         over time, depending on many factors. When the demands placed on a
@@ -70,7 +69,7 @@ export function AddPost({ getPosts }) {
         for a relative, or experiencing economic hardship, they may experience
         poor mental health.
       </p>
-      <h1 className="mb-5 text-2xl">Can your mental health change over time?</h1>
+      <h1 className=" text-2xl">Can your mental health change over time?</h1>
       <p>
         There is no single cause for mental illness. A number of factors can
         contribute to risk for mental illness, such as
