@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# Mentat
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## A safe place to share your thoughts and emotions.
+In this pseudonymous forum people can openly talk and share their thoughts and experiences about mental health and find support, without being judged of discriminated.
 
-## Available Scripts
+## The Support You Need
+Our community is designed for people to support each other and to interact with people going through similar issues.
 
-In the project directory, you can run:
+## No Sensitive Data Collected
+We don't collect any senstitive data about you, like your real name, your address, or data about the usage of the platform.
 
-### `npm start`
+## Moderated By The Community
+Interact with others in an safe enviroment where moderators ensure that our communication is safe and respectful.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features of Mentat
+Users of Mentat can register & login (&logout). Both Email and Username are unique. Only Mentat members are able to view the posts and comments. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Once the user is logged in, the user can create posts about mental health and attach them to a suitable category. The posts are displayed newest first on the main feed of the page. Here the user can choose to read the post in its entirety, and also comment on it.
 
-### `npm test`
+The user can also search for posts by category, which will display every post linked to the chosen category.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The author of each post can choose to edit it as they so choose, by changing the title, content and category as they wish; the same feature applies to the comments. ### `PS` Any user who didn't author a post or comment cannot edit or delete them, and the buttons will be hidden from view.
 
-### `npm run build`
+## Technology Used
+React.js, TailwindCSS, CSS, Node.js, Mongoose, JWT, Bcrypt, Cors, Dotenv and Express.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Made with ❤️ in Europe 🇪🇺 by @productandres & @stålebjørdal
