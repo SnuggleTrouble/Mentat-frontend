@@ -1,5 +1,6 @@
 import { useState, useContext } from "react";
 import { AuthContext } from "../../context";
+import { Link } from "react-router-dom";
 
 export function Signup() {
   const { signup } = useContext(AuthContext);
@@ -75,6 +76,8 @@ export function Signup() {
         >
           Signup
         </button>
+        <div><p>Already have an account?
+        <br/>Click <Link to="/login"><b>here</b></Link> to log in</p></div>
       </form>
     </div>
   );

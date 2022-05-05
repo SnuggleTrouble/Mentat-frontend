@@ -1,4 +1,4 @@
-import { Navbar, Signup } from "components";
+import { Signup } from "components";
 import { AuthContext } from "context";
 import { useContext } from "react";
 
