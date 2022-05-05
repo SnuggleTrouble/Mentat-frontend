@@ -3,8 +3,8 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Support } from "components/Support/Support";
 import comment from "./comment.png";
-import editing from "..//..//images/editing.png";
-import garbage from "..//..//images//garbage.png";
+import editing from "./pencil.png";
+import garbage from "./delete .png";
 import { AuthContext } from "context";
 
 // Receive the id, the content and the setPost function.
