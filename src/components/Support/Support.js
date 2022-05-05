@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { AuthContext } from "context";
 import axios from "axios";
-import like from "..//..//images/like.png"
+import like from "./heart.png"
 
 export function Support({ support, id }) {
   // Acquire the authorization context to get the user

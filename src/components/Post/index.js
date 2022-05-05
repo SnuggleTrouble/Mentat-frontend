@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Support } from "components/Support/Support";
-import comment from "..//..///images/comment.png";
+import comment from "./comment.png";
 import editing from "..//..//images/editing.png";
 import garbage from "..//..//images//garbage.png";
 import { AuthContext } from "context";
