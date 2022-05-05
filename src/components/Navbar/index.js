@@ -8,11 +8,10 @@ export function Navbar() {
     <div className=" flex p-5 bg-emerald-500 text-emerald-900 font-semibold">
       <nav className=" flex flex-row justify-evenly gap-20">
         <div className=" text-emerald-600 ">
-          <img src="./Mentat-logo.png" width={115} alt=""/>
+        {user && <Link to="/"><img src="./Mentat-logo.png" width={115} alt=""/></Link>}
+        {!user && <Link to="/landing"><img src="./Mentat-logo.png" width={115} alt=""/></Link>}
         </div>
-        <div>{user && <Link to="/">Main Feed</Link>}</div>
         <div>{user && <Link to="/post/categories">Categories</Link>}</div>
-        <div>{!user && <Link to="/landing">Home</Link>}</div>
         <div>
           {!user && <Link to="/login">Login</Link>}
           {user && <button onClick={logout}>Logout</button>}
