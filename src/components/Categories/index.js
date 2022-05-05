@@ -34,19 +34,25 @@ export function CategoryFilter(category, post) {
   };
 
   return (
-    <div className="flex">
-      <ul>
+    <div className="flex p-40 ">
+    <div className="flex flex-col b">
+    <div className="">
+    <ul className="flex flex-row gap-5 flex-wrap">
         {categories.map(category => {
           return (
-            <li className="flex flex-row">
-              <button onClick={() => fetchPosts(category.category)}>
+            <li className="">
+              <button className="flex flex-row rounded-xl bg-gray-50 text-stone-600 p-3"onClick={() => fetchPosts(category.category)}>
                 {category.category}
               </button>
             </li>
           );
         })}
       </ul>
-      <ListOfPosts posts={posts} setPosts={setPosts} getPosts={() => {}} />
+    </div>
+    <div>
+    <ListOfPosts posts={posts} setPosts={setPosts} getPosts={() => {}} />
+    </div>
+    </div>
     </div>
   );
 }
