@@ -30,13 +30,13 @@ export function AddComment({ id, individualPost, setIndividualPost }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <textarea
+    <form className ="flex flex-col gap-10" onSubmit={handleSubmit}>
+      <div className ="flex flex-col gap-10">
+        <textarea className="rounded-sm p-10"
           value={commentContent}
           onChange={event => setCommentContent(event.target.value)}
         />
-        <button type="submit">Create Comment</button>
+        <button className=" p-2 rounded-xl bg-green-400 text-emerald-700 w-40" type="submit">Create Comment</button>
       </div>
     </form>
   );
