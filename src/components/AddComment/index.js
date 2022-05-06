@@ -30,9 +30,9 @@ export function AddComment({ id, individualPost, setIndividualPost }) {
   };
 
   return (
-    <form className ="flex flex-col gap-10" onSubmit={handleSubmit}>
+    <form className ="flex flex-col gap-10 " onSubmit={handleSubmit}>
       <div className ="flex flex-col gap-10">
-        <textarea className="rounded-sm p-10"
+        <textarea className="rounded-sm p-2"
           value={commentContent}
           onChange={event => setCommentContent(event.target.value)}
         />

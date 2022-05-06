@@ -1,8 +1,8 @@
 import { useState, useContext } from "react";
 import axios from "axios";
 import { AuthContext } from "context";
-import editing from "..//..//images/editing.png";
-import garbage from "..//..//images//garbage.png";
+import editing from "./pencilComment.png";
+import garbage from "./deleteComment.png";
 
 // Receive the id, the content and the setComment function
 export function Comment({
@@ -137,7 +137,7 @@ export function Comment({
                     className=" flex flex-wrap justify-items-start gap-10"
                   >
                     <button
-                      className=" bg-gray-100 rounded-lg  px-5 min-w-fit "
+                      className=" bg-gray-100 rounded-lg  p-3 min-w-fit "
                       onClick={handleEdit}
                     >
                       <img src={editing} width="22px" alt=""></img>
