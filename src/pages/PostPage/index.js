@@ -34,39 +34,41 @@ export function PostPage({ setComments, getComments }) {
     <div className="p-20">
       {individualPost && (
         <div className="bg-white p-10 rounded-xl flex flex-col gap-10">
-        <div className="">
+          <div className="">
+            <div className=" flex justify-between">
+              <p className="text-emerald-800 ">{`Author: ${individualPost.user.userName}`}</p>
+              <p>{individualPost.createdAt.split("T")[0]}</p>
+              <p className="p-3 flex justify-center rounded-xl bg-emerald-400 text-emerald-800 ">
+                {individualPost.category}
+              </p>
+            </div>
 
-        <div className=" flex justify-between">
-        <p className="text-emerald-800 ">{`Author: ${individualPost.user.userName}`}</p>
-        <p>{individualPost.createdAt.split("T")[0]}</p>
-          <p className="p-3 flex justify-center rounded-xl bg-emerald-400 text-emerald-800 ">{individualPost.category}</p>
-        </div>
-
-        <div>
-
-          <h3 className="font-bold mb-4">{individualPost.title}</h3>
-          <p style={{"white-space": "pre-line"}}>{individualPost.content}</p>
-        </div>
+            <div>
+              <h3 className="font-bold mb-4">{individualPost.title}</h3>
+              <p style={{ "white-space": "pre-line" }}>
+                {individualPost.content}
+              </p>
+            </div>
           </div>
           <div>
-          <div className="p-10 rounded-xl flex flex-col border-2 border-dashed bg-gray-100">
-          <AddComment 
-            id={id}
-            individualPost={individualPost}
-            setIndividualPost={setIndividualPost}
-            getComments={getComments}
-            setComments={setComments}
-            updateComment={updateComment}
-            />
-          </div>
+            <div className="p-10 rounded-xl flex flex-col border-2 border-dashed bg-gray-100">
+              <AddComment
+                id={id}
+                individualPost={individualPost}
+                setIndividualPost={setIndividualPost}
+                getComments={getComments}
+                setComments={setComments}
+                updateComment={updateComment}
+              />
+            </div>
           </div>
           <div className="">
-          <ListOfComments
-            comments={individualPost.comments}
-            setComments={setComments}
-            fetchPost={fetchPost}
-            deleteComment={deleteComment}
-          />
+            <ListOfComments
+              comments={individualPost.comments}
+              setComments={setComments}
+              fetchPost={fetchPost}
+              deleteComment={deleteComment}
+            />
           </div>
         </div>
       )}
