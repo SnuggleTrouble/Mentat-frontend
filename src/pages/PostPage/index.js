@@ -35,13 +35,16 @@ export function PostPage({ setComments, getComments }) {
       {individualPost && (
         <div className="bg-white p-10 rounded-xl flex flex-col gap-10">
         <div className="">
-          <p className="text-emerald-800 mb-20">{`Author: ${individualPost.user.userName}`}</p>
+        <div className="">
+        <p className="text-emerald-800 mb-20">{`Author: ${individualPost.user.userName}`}</p>
           <p>{individualPost.category}</p>
           <h3 className="font-bold mb-4">{individualPost.title}</h3>
           <p style={{"white-space": "pre-line"}}>{individualPost.content}</p>
+        </div>
+  
           </div>
           <div>
-          <div className="p-20 rounded-xl flex flex-col bg-gray-100 ">
+          <div className="p-10 rounded-xl flex flex-col border-2 border-dashed bg-gray-100">
           <AddComment 
             id={id}
             individualPost={individualPost}
