@@ -98,8 +98,10 @@ export function Post({
         <div className="p-10 bg-white rounded-2xl ">
           <div className="flex flex-col">
             <div className="flex justify-between">
+              <div>
               <div className="my-2 text-emerald-800">{`${post.user.userName}`}</div>
-              <p>{createdAt.split("T")[0]}</p>
+              <p className="text-stone-400">{createdAt.split("T")[0]}</p>
+              </div>
               <p className="p-2 w-40 flex justify-center rounded-xl bg-emerald-400 mb-10 text-emerald-900">
                 {category}
               </p>
