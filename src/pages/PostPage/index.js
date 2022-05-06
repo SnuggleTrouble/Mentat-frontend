@@ -38,6 +38,7 @@ export function PostPage({ setComments, getComments }) {
 
         <div className=" flex justify-between">
         <p className="text-emerald-800 ">{`Author: ${individualPost.user.userName}`}</p>
+        <p>{individualPost.createdAt.split("T")[0]}</p>
           <p className="p-3 flex justify-center rounded-xl bg-emerald-400 text-emerald-800 ">{individualPost.category}</p>
         </div>
 
