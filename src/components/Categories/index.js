@@ -34,14 +34,15 @@ export function CategoryFilter(category, post) {
   };
 
   return (
-    <div className="flex p-40 ">
-    <div className="flex flex-col b">
+    <div className="flex">
+    <div className="flex flex-col b p-20 gap-20">
+    <h1 className="text-2xl font-medium text-stone-700">Choose a category to find posts associated with it.</h1>
     <div className="">
-    <ul className="flex flex-row gap-5 flex-wrap">
+    <ul className="flex flex-row gap-3  flex-wrap">
         {categories.map(category => {
           return (
             <li className="">
-              <button className="flex flex-row rounded-xl bg-gray-50 text-stone-600 p-3 border-1 shadow-sm" onClick={() => fetchPosts(category.category)}>
+              <button className="flex flex-row rounded-xl bg-emerald-400		 border-2 text-emerald-800 p-3 border-1 shadow-sm" onClick={() => fetchPosts(category.category)}>
                 {category.category}
               </button>
             </li>

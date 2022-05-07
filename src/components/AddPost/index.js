@@ -34,7 +34,7 @@ export function AddPost({ getPosts }) {
   };
 
   return (
-    <form className=" p-20 " onSubmit={handleSubmit}>
+    <form className="" onSubmit={handleSubmit}>
       
 
       <div className=" border-2 border-emerald-300 p-20 bg-white rounded-xl flex flex-col justify-start">

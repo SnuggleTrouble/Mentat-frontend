@@ -2,7 +2,7 @@ import { Post } from "components/Post";
 
 export function ListOfPosts({ posts, setPosts, getPosts }) {
   return (
-    <div className="mt-10 p-5 flex flex-col gap-10">
+    <div className=" flex flex-col gap-10">
       {posts
         .slice(0)
         .reverse()
