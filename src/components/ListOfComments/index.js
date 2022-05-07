@@ -7,7 +7,7 @@ export function ListOfComments({
   deleteComment,
 }) {
   return (
-    <div>
+    <div className="flex flex-col gap-5">
       {comments &&
         comments
           .slice(0)
