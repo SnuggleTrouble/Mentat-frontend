@@ -49,9 +49,9 @@ export function Home() {
 
   !user && navigate("/login");
   return (
-    <div>
+    <div className=" p-20 ">
       {user ? (
-        <div>
+        <div className=" flex flex-col gap-20">
           <AddPost getPosts={getPosts} setPosts={setPosts}/>
           <ListOfPosts
             posts={posts}
